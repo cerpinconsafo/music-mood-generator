@@ -102,6 +102,7 @@ function miamiVids() {
     let url = "https://www.youtube-nocookie.com/embed/DJ_wEoW8Qcg?&autoplay=1";
     embed.src=url;
 };
+
 function heavyVids() {
     console.log("pressed the heavyAF button") 
     removePreviousMoodText()
@@ -111,6 +112,7 @@ function heavyVids() {
     let url = "https://www.youtube-nocookie.com/embed/SZ2WrN93vno?&autoplay=1";
     embed.src=url;
 };
+
 function mindVids() {
     console.log("pressed the mind melt button") 
     removePreviousMoodText()
@@ -120,12 +122,13 @@ function mindVids() {
     let url = "https://www.youtube-nocookie.com/embed/zjJB_dMuEtY?&autoplay=1";
     embed.src=url;
 };
+
 function fourVids() {
     console.log("pressed the four to floor button") 
     removePreviousMoodText()
     moodTagline.innerText += 
     "Get Ready To Move Your Body, BBY!";   
-
+// solomun/kaytranada videos wont embed, need other options
     let url = "https://www.youtube-nocookie.com/embed/bk6Xst6euQk?&autoplay=1";
     embed.src=url;
 };
