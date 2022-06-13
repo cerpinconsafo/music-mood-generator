@@ -59,7 +59,7 @@ function phonkVids() {
     moodTagline.innerText += 
     "Yaooooo, Check out this Phonky shiiiii...";   
 
-    let url = "https://www.youtube-nocookie.com/embed/Ax4Y5n4f5K8?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/TP6DcuI0x0Q?&autoplay=1";
     embed.src=url;   
 };
 

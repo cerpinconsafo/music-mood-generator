@@ -19,7 +19,7 @@ create 'random mood' buttons
 
 //mega-chill
     //steezyAF
-        https://www.youtube.com/watch?v=xgirCNccI68
+        https://youtu.be/TP6DcuI0x0Q
     //steezy coffee shop
         https://www.youtube.com/watch?v=-5KAN9_CzSA
     //lofi girl sleep
