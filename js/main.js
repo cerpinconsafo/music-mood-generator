@@ -59,7 +59,7 @@ function phonkVids() {
     moodTagline.innerText += 
     "Yaooooo, Check out this Phonky shiiiii...";   
 
-    let url = "https://www.youtube-nocookie.com/embed/TP6DcuI0x0Q?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/dv5yx1g5j6E?&autoplay=1";
     embed.src=url;   
 };
 
@@ -68,8 +68,7 @@ function phonkVids() {
     removePreviousMoodText()
     moodTagline.innerText += 
     "Straight chillin...MEGA chillin...";   
-
-    let url = "https://www.youtube-nocookie.com/embed/xgirCNccI68?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/j4sJkuOPUP8&autoplay=1";
     embed.src=url;  
 };
 
@@ -99,7 +98,7 @@ function miamiVids() {
     moodTagline.innerText += 
     "That 'Cruising in a drop down the Miami strip' Vibe";   
 
-    let url = "https://www.youtube-nocookie.com/embed/DJ_wEoW8Qcg?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/85bkCmaOh4o?&autoplay=1";
     embed.src=url;
 };
 
@@ -109,7 +108,7 @@ function heavyVids() {
     moodTagline.innerText += 
     "Head Bangin energy";   
 
-    let url = "https://www.youtube-nocookie.com/embed/SZ2WrN93vno?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/MA2YTm7qjnE?&autoplay=1";
     embed.src=url;
 };
 
