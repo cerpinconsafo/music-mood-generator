@@ -68,7 +68,7 @@ function phonkVids() {
     removePreviousMoodText()
     moodTagline.innerText += 
     "Straight chillin...MEGA chillin...";   
-    let url = "https://www.youtube-nocookie.com/embed/j4sJkuOPUP8&autoplay=1";
+    let url = "https://www.youtube.com/embed/j4sJkuOPUP8&autoplay=1";
     embed.src=url;  
 };
 
@@ -97,7 +97,7 @@ function miamiVids() {
     removePreviousMoodText()
     moodTagline.innerText += 
     "That 'Cruising in a drop down the Miami strip' Vibe";   
-
+    
     let url = "https://www.youtube-nocookie.com/embed/85bkCmaOh4o?&autoplay=1";
     embed.src=url;
 };
