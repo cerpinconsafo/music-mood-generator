@@ -3,19 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="A funky bunch of curated YouTube playlists for interestingly specific and abstract moods">
+  <meta name="description" content="A collection of YouTube playlists for various moods">
   <meta name="keywords" content="music, youtube, playlist, mood">
 
-  <title>Cavi's Mood Music Generator</title>
+  <title>Mood Music Generator</title>
 
-  <!-- external CSS link -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
     <nav>
-      <ul class="row">
+      <ul>
         <li><a href="https://psdev.netlify.app/" target="_blank" rel="noopener noreferrer">Dev</a></li>
         <li><a href="http://www.patrickskolskyart.com/" target="_blank" rel="noopener noreferrer">Art</a></li>
         <li><a href="https://github.com/cerpinconsafo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -25,14 +24,11 @@
     </nav>
   </header>
   <main>
-    <!-- landing area for user instructions -->
-    <h1 class="center">Mood Music Generator</h1>
-    <h6 class="center">brought to you by //cavi</h6>
-    <h3 class="center">Choose a mood below until you catch the vibe...</h3>
+    <h1>Mood Music Generator</h1>
+    <h3>Choose a mood below:</h3>
 
-    <!-- mood buttons -->
     <section id="moodList">
-      <ul class="row">
+      <ul>
         <li><button id="phonkBut">Phonky</button></li>
         <li><button id="chillBut">Mega-Chill</button></li>
         <li><button id="zoneBut">Zone Me Out</button></li>
@@ -43,19 +39,16 @@
         <li><button id="fourBut">4 to the Floor Bounce</button></li>
       </ul>
     </section>
-    <!-- end mood buttons -->
 
-    <!-- where the dynamic tagline for the currently active mood goes -->
-    <h2 id="moodTagline" class="row"></h2>
+    <h2 id="moodTagline"></h2>
 
-    <!-- VIDEO container -->
-    <section id="addVideoHere" class="center">
+    <section id="addVideoHere">
       <iframe id="embed" width="853" height="505" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
   </main>
 
   <footer>
-    <h5>DISCLAIMER: I am merely SHARING these wonderful channels/playlists for a fun, little experiment. I DO NOT OWN ANY RIGHTS TO THESE YOUTUBE CHANNELS, NOR AM I SPONSORED/AFFILIATED WITH THEM. Please, if you enjoy the music/art/content, support each respective creator/channel by giving them a visit, a like, or a subscribe. If you are the owner of any of this content and have an issue with me sharing them, please contact me directly via pskolsky74@gmail.com!</h5>
+    <p>DISCLAIMER: This website shares YouTube playlists for fun. I do not own the content.</p>
   </footer>
 
   <script type="text/javascript" src="js/main.js"></script>
