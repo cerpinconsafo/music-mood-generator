@@ -1,1011 +1,117 @@
-/* Reset default styles */
-/* Friday September 22 update from chatgpt
-
-
-Chat history
-New Chat
-Close sidebar
-Today
-
-Refactor to OOP Code
-Yesterday
-
-Random Item from Array
-Git Repo Code Conversion
-
-    Create React App: Basics
-
-July
-
-Learn MERN Stack Webdev
-React Elden Ring SPA
-
-    Learning ServiceNow for Jobs
-
-June
-
-User Request: Component for User Assistant Response: Code Component for User Code Component for User
-
-    Random YouTube Video Fetcher
-
-May
-
-Customizable Event Reminder.
-New chat
-React Random Video Player
-
-    Random YouTube Videos
-
-Upgrade to Plus
-Default (GPT-3.5)
-User
-This is the main file for a small app I made. How can you made this more in line with Object Oriented Programing
-ChatGPT
-
-To make your small app more in line with Object-Oriented Programming (OOP) principles, you can organize your code into classes and objects. Here's a general outline of how you can refactor your code:
-
-    Identify the main entities in your app:
-        Determine the key components or objects in your app that have attributes and behaviors. These will become your classes.
-
-    Create classes for your entities:
-        For each identified entity, create a class that encapsulates its attributes and behaviors.
-
-    Instantiate objects:
-        In your main code, create instances (objects) of these classes as needed.
-
-    Encapsulate data and methods:
-        Define attributes (data) as instance variables within your classes.
-        Define methods (functions) as member functions within your classes to encapsulate behaviors.
-
-Here's an example of how you can refactor your code into a simple OOP structure:
-
-python
-
-# Define a class for the 'Person' entity
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def introduce(self):
-        return f"My name is {self.name} and I am {self.age} years old."
-
-# Define a class for the 'Task' entity
-class Task:
-    def __init__(self, description):
-        self.description = description
-        self.is_completed = False
-
-    def complete(self):
-        self.is_completed = True
-
-# Instantiate objects
-person1 = Person("Alice", 30)
-person2 = Person("Bob", 25)
-
-task1 = Task("Write OOP code")
-task2 = Task("Refactor the app")
-
-# Use the objects
-print(person1.introduce())
-print(person2.introduce())
-
-print("Tasks:")
-print(task1.description, " - Completed:", task1.is_completed)
-task1.complete()
-print(task2.description, " - Completed:", task2.is_completed)
-
-This refactoring creates two classes, Person and Task, each with its own attributes and methods. You then create instances of these classes to work with data and behaviors related to people and tasks.
-
-By following these steps, you'll have a more organized and structured codebase that adheres to OOP principles, making it easier to manage and extend your app as it grows.
-User
-Can you do it with this: /*
-
-UPDATING THIS TO RUN DIFFERENTLY, BUT COMMITTING THE FIRST ITERATION OF THE PROJECT FOLDER.
-
-//on page load, only show MOOD buttons/list
-//on click, will dynamically populate 'vidArea' in HTML with embedded YOUTUBE code
-    //depending on the button (mood) clicked, a different URL variable from the moodArray can be inserted into the embed code (I THINK)
-*/
-//
-//
-//
-
-//globals IKNOW I KNOW WILL REFACTOR
-
-const moodTagline = document.getElementById("moodTagline");
-const embed =  document.getElementById("embed");
-//
-//
-//
-
-//button variables
-
-const phonkBut = document.querySelector('#phonkBut')
-const chillBut = document.querySelector('#chillBut')
-const zoneBut = document.querySelector('#zoneBut')
-const gameBut = document.querySelector('#gameBut')
-const miamiBut = document.querySelector('#miamiBut')
-const heavyBut = document.querySelector('#heavyBut')
-const mindBut = document.querySelector('#mindBut')
-const fourBut = document.querySelector('#fourBut')
-//
-//
-//
-
-//event listeners
-
-phonkBut.addEventListener('click', phonkVids);
-chillBut.addEventListener('click', chillVids);
-zoneBut.addEventListener('click', zoneVids);
-gameBut.addEventListener('click', gameVids);
-miamiBut.addEventListener('click', miamiVids);
-heavyBut.addEventListener('click', heavyVids);
-mindBut.addEventListener('click', mindVids);
-fourBut.addEventListener('click', fourVids);
-//
-//
-//
-
-// functions
-
-function removePreviousMoodText() {
-    moodTagline.innerText= "";
-};
-
-function phonkVids() {   
-
-    console.log("pressed the Phonk button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Yaooooo, Check out this Phonky shiiiii...";   
-
-    let url = "https://www.youtube-nocookie.com/embed/dv5yx1g5j6E?&autoplay=1";
-    embed.src=url;   
-};
-
- function chillVids() {
-    console.log("pressed the chill button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Straight chillin...MEGA chillin...";   
-    let url = "https://www.youtube.com/embed/j4sJkuOPUP8&autoplay=1";
-    embed.src=url;  
-};
-
-function zoneVids() {
-    console.log("pressed the zone button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "On a futuristic dystopian ride through nostlagic voids";   
-
-    let url = "https://www.youtube-nocookie.com/embed/F9L4q-0Pi4E?&autoplay=1";
-    embed.src=url;  
-};
-
-function gameVids() {
-    console.log("pressed the game button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Retro Gamin', but for your ears";   
-
-    let url = "https://www.youtube-nocookie.com/embed/DJ_wEoW8Qcg?&autoplay=1";
-    embed.src=url;
-};
-
-function miamiVids() {
-    console.log("pressed the game button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "That 'Cruising in a drop down the Miami strip' Vibe";   
-    
-    let url = "https://www.youtube-nocookie.com/embed/85bkCmaOh4o?&autoplay=1";
-    embed.src=url;
-};
-
-function heavyVids() {
-    console.log("pressed the heavyAF button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Head Bangin energy";   
-
-    let url = "https://www.youtube-nocookie.com/embed/MA2YTm7qjnE?&autoplay=1";
-    embed.src=url;
-};
-
-function mindVids() {
-    console.log("pressed the mind melt button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Expand Your M I N D";   
-
-    let url = "https://www.youtube-nocookie.com/embed/zjJB_dMuEtY?&autoplay=1";
-    embed.src=url;
-};
-
-function fourVids() {
-    console.log("pressed the four to floor button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Get Ready To Move Your Body, BBY!";   
-// solomun/kaytranada videos wont embed, need other options
-    let url = "https://www.youtube-nocookie.com/embed/bk6Xst6euQk?&autoplay=1";
-    embed.src=url;
-};
-
-ChatGPT
-
-To make your code more in line with Object-Oriented Programming (OOP) principles, you can encapsulate related functionality into classes and use instances of those classes to manage the behavior of your app. Here's a refactored version of your code with an OOP structure:
-
-javascript
-
-class MoodPlayer {
-  constructor() {
-    this.moodTagline = document.getElementById("moodTagline");
-    this.embed = document.getElementById("embed");
-  }
-
-  removePreviousMoodText() {
-    this.moodTagline.innerText = "";
-  }
-
-  playVideo(url) {
-    this.embed.src = url;
-  }
-
-  updateMoodTagline(tagline) {
-    this.removePreviousMoodText();
-    this.moodTagline.innerText = tagline;
-  }
-}
-
-class MoodButton {
-  constructor(buttonId, tagline, videoUrl) {
-    this.button = document.querySelector(buttonId);
-    this.tagline = tagline;
-    this.videoUrl = videoUrl;
-  }
-
-  addClickListener(player) {
-    this.button.addEventListener("click", () => {
-      player.updateMoodTagline(this.tagline);
-      player.playVideo(this.videoUrl);
-    });
-  }
-}
-
-// Create a MoodPlayer instance
-const moodPlayer = new MoodPlayer();
-
-// Create MoodButton instances for different moods
-const phonkButton = new MoodButton('#phonkBut', "Yaooooo, Check out this Phonky shiiiii...", "https://www.youtube-nocookie.com/embed/dv5yx1g5j6E?&autoplay=1");
-const chillButton = new MoodButton('#chillBut', "Straight chillin...MEGA chillin...", "https://www.youtube.com/embed/j4sJkuOPUP8&autoplay=1");
-const zoneButton = new MoodButton('#zoneBut', "On a futuristic dystopian ride through nostlagic voids", "https://www.youtube-nocookie.com/embed/F9L4q-0Pi4E?&autoplay=1");
-// Add more MoodButton instances for other moods here
-
-// Add click listeners for MoodButtons
-phonkButton.addClickListener(moodPlayer);
-chillButton.addClickListener(moodPlayer);
-zoneButton.addClickListener(moodPlayer);
-// Add click listeners for other MoodButtons here
-
-In this refactored code:
-
-    There are two classes: MoodPlayer and MoodButton.
-    MoodPlayer class manages the mood tagline and video embedding.
-    MoodButton class represents each mood button and encapsulates its tagline and video URL.
-    Event listeners are added to each MoodButton instance to trigger actions on the MoodPlayer instance when the button is clicked.
-
-This OOP approach makes your code more modular and easier to maintain as you can easily add more mood buttons without duplicating code.
-User
-Can you just revise this code block? /*
-
-UPDATING THIS TO RUN DIFFERENTLY, BUT COMMITTING THE FIRST ITERATION OF THE PROJECT FOLDER.
-
-//on page load, only show MOOD buttons/list
-//on click, will dynamically populate 'vidArea' in HTML with embedded YOUTUBE code
-    //depending on the button (mood) clicked, a different URL variable from the moodArray can be inserted into the embed code (I THINK)
-*/
-//
-//
-//
-
-//globals IKNOW I KNOW WILL REFACTOR
-
-const moodTagline = document.getElementById("moodTagline");
-const embed =  document.getElementById("embed");
-//
-//
-//
-
-//button variables
-
-const phonkBut = document.querySelector('#phonkBut')
-const chillBut = document.querySelector('#chillBut')
-const zoneBut = document.querySelector('#zoneBut')
-const gameBut = document.querySelector('#gameBut')
-const miamiBut = document.querySelector('#miamiBut')
-const heavyBut = document.querySelector('#heavyBut')
-const mindBut = document.querySelector('#mindBut')
-const fourBut = document.querySelector('#fourBut')
-//
-//
-//
-
-//event listeners
-
-phonkBut.addEventListener('click', phonkVids);
-chillBut.addEventListener('click', chillVids);
-zoneBut.addEventListener('click', zoneVids);
-gameBut.addEventListener('click', gameVids);
-miamiBut.addEventListener('click', miamiVids);
-heavyBut.addEventListener('click', heavyVids);
-mindBut.addEventListener('click', mindVids);
-fourBut.addEventListener('click', fourVids);
-//
-//
-//
-
-// functions
-
-function removePreviousMoodText() {
-    moodTagline.innerText= "";
-};
-
-function phonkVids() {   
-
-    console.log("pressed the Phonk button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Yaooooo, Check out this Phonky shiiiii...";   
-
-    let url = "https://www.youtube-nocookie.com/embed/dv5yx1g5j6E?&autoplay=1";
-    embed.src=url;   
-};
-
- function chillVids() {
-    console.log("pressed the chill button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Straight chillin...MEGA chillin...";   
-    let url = "https://www.youtube.com/embed/j4sJkuOPUP8&autoplay=1";
-    embed.src=url;  
-};
-
-function zoneVids() {
-    console.log("pressed the zone button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "On a futuristic dystopian ride through nostlagic voids";   
-
-    let url = "https://www.youtube-nocookie.com/embed/F9L4q-0Pi4E?&autoplay=1";
-    embed.src=url;  
-};
-
-function gameVids() {
-    console.log("pressed the game button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Retro Gamin', but for your ears";   
-
-    let url = "https://www.youtube-nocookie.com/embed/DJ_wEoW8Qcg?&autoplay=1";
-    embed.src=url;
-};
-
-function miamiVids() {
-    console.log("pressed the game button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "That 'Cruising in a drop down the Miami strip' Vibe";   
-    
-    let url = "https://www.youtube-nocookie.com/embed/85bkCmaOh4o?&autoplay=1";
-    embed.src=url;
-};
-
-function heavyVids() {
-    console.log("pressed the heavyAF button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Head Bangin energy";   
-
-    let url = "https://www.youtube-nocookie.com/embed/MA2YTm7qjnE?&autoplay=1";
-    embed.src=url;
-};
-
-function mindVids() {
-    console.log("pressed the mind melt button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Expand Your M I N D";   
-
-    let url = "https://www.youtube-nocookie.com/embed/zjJB_dMuEtY?&autoplay=1";
-    embed.src=url;
-};
-
-function fourVids() {
-    console.log("pressed the four to floor button") 
-    removePreviousMoodText()
-    moodTagline.innerText += 
-    "Get Ready To Move Your Body, BBY!";   
-// solomun/kaytranada videos wont embed, need other options
-    let url = "https://www.youtube-nocookie.com/embed/bk6Xst6euQk?&autoplay=1";
-    embed.src=url;
-};
-ChatGPT
-
-Your code is already quite concise and functional. However, you can make it more organized and maintainable by using an object-oriented approach. Here's a revised version of your code using JavaScript classes:
-
-javascript
-
-class MoodPlayer {
-  constructor() {
-    this.moodTagline = document.getElementById("moodTagline");
-    this.embed = document.getElementById("embed");
-  }
-
-  removePreviousMoodText() {
-    this.moodTagline.innerText = "";
-  }
-
-  playVideo(videoUrl) {
-    this.removePreviousMoodText();
-    this.moodTagline.innerText = videoUrl.tagline;
-    this.embed.src = videoUrl.url;
-  }
-}
-
-class MoodButton {
-  constructor(id, tagline, url) {
-    this.button = document.querySelector(id);
-    this.tagline = tagline;
-    this.url = url;
-  }
-
-  addClickListener(player) {
-    this.button.addEventListener("click", () => {
-      player.playVideo({ tagline: this.tagline, url: this.url });
-    });
-  }
-}
-
-// Create a MoodPlayer instance
-const moodPlayer = new MoodPlayer();
-
-// Create MoodButton instances for different moods
-const moodButtons = [
-  new MoodButton('#phonkBut', "Yaooooo, Check out this Phonky shiiiii...", "https://www.youtube-nocookie.com/embed/dv5yx1g5j6E?&autoplay=1"),
-  new MoodButton('#chillBut', "Straight chillin...MEGA chillin...", "https://www.youtube.com/embed/j4sJkuOPUP8&autoplay=1"),
-  new MoodButton('#zoneBut', "On a futuristic dystopian ride through nostalgic voids", "https://www.youtube-nocookie.com/embed/F9L4q-0Pi4E?&autoplay=1"),
-  new MoodButton('#gameBut', "Retro Gamin', but for your ears", "https://www.youtube-nocookie.com/embed/DJ_wEoW8Qcg?&autoplay=1"),
-  new MoodButton('#miamiBut', "That 'Cruising in a drop down the Miami strip' Vibe", "https://www.youtube-nocookie.com/embed/85bkCmaOh4o?&autoplay=1"),
-  new MoodButton('#heavyBut', "Head Bangin energy", "https://www.youtube-nocookie.com/embed/MA2YTm7qjnE?&autoplay=1"),
-  new MoodButton('#mindBut', "Expand Your M I N D", "https://www.youtube-nocookie.com/embed/zjJB_dMuEtY?&autoplay=1"),
-  new MoodButton('#fourBut', "Get Ready To Move Your Body, BBY!", "https://www.youtube-nocookie.com/embed/bk6Xst6euQk?&autoplay=1"),
-];
-
-// Add click listeners for MoodButtons
-moodButtons.forEach((button) => {
-  button.addClickListener(moodPlayer);
-});
-
-In this refactored code:
-
-    There are two classes: MoodPlayer and MoodButton.
-    MoodPlayer class manages the mood tagline and video embedding.
-    MoodButton class represents each mood button and encapsulates its tagline and video URL.
-    Event listeners are added to each MoodButton instance to trigger actions on the MoodPlayer instance when the button is clicked.
-    MoodButton instances are created in an array for better organization.
-
-This approach makes your code more modular and easier to extend with additional mood buttons if needed.
-User
-Can you refactor this UI to make it a sleek, minimal, retro feel, but with an 80s color palette?: <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="description"
-		content="A funky bunch of curated youtube playlists for interestingly specific and abstract moods ">
-	<meta name="keywords" content="music, youtube, playlist, mood">
-
-	<title>Cavi's Mood Music Generator</title>
-
-	<!-- external CSS link -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gruppo&family=Roboto+Serif&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-
-<body >
-	<header >
-		<nav>
-		<ul  class="row">
-			<li>| &nbsp<a href="https://psdev.netlify.app/" target="_blank" rel="noopener noreferrer">dev &nbsp</a></li>
-			<li>| &nbsp<a href="http://www.patrickskolskyart.com/" target="_blank" rel="noopener noreferrer"> art</a></li>	
-			<li>| &nbsp<a href="https://github.com/cerpinconsafo" target="_blank" rel="noopener noreferrer"> github&nbsp</a></li>
-			<li>| &nbsp<a href="https://twitter.com/cerpinconsafo" target="_blank" rel="noopener noreferrer"> twitter&nbsp</a></li>
-			<li>| &nbsp<a href="http://instagram/pskolsky_art" target="_blank" rel="noopener noreferrer"> insta</a></li>		
-				
-			
-		</ul>
-	
-		</nav>
-	</header>
-	<main >
-		<!-- landing area for user instructions -->
-		<h1 class="center">Mood Music Generator</h1>
-		<h6 class="center"> brought to you by //cavi</h6>
-		<h3 class="center">Choose a mood below until you catch the vibe...</h3>
-
-		<!-- mood buttons -->
-		<section id="moodList">
-			<ul  class="row">
-				<li><button id="phonkBut">phonky</button></li>
-				<li><button id="chillBut">mega-chill</button></li>
-				<li><button id="zoneBut">zone me out, drone me out</button></li>
-				<li><button id="gameBut">retro gamin'</button></li>
-				
-				<li><button id="miamiBut">miami strip cruisin'</button></li> <!-- this will be some smoothe ass stuff, not sure what -->
-				
-				<li><button id="heavyBut">heavy af</button></li> <!-- this will be some either metal or hardcore type stuff -->
-				
-				<li><button id="mindBut">mind melter</button></li> <!-- this will be flylo/brainfeeder stuff -->
-				
-				<li><button id="fourBut">4 2 the floor bounce</button></li> <!-- house type club-ish flavor -->
-		</section><!-- end mood buttons -->
-
-		<!-- where the dynamic tagline for the currently active mood goes -->
-		<h2 id="moodTagline" class="row"></h2>
-		
-		<!-- VIDEO container -->
-		<section id="addVideoHere" class="center" >			
-			<iframe id ="embed"   width="853" height="505" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-			<!-- I want to add a 'more like this' button that randomly selects another similar video of the current mood via an array/object of each mood
-				<button class="moreButton">More Like This</button> -->
-
-		</section> 
-	</main>
-
-	<footer><h5>DISCLAIMER: I am merely SHARING these wonderful channels/playlists for a fun, little experiment. I DO NOT OWN ANY RIGHTS TO THESE YOUTUBE CHANNELS, NOR AM I SPONSORED/AFFILIATED WITH THEM. Please, if you enjoy the music/art/content, support each respective creator/channel by giving them a visit, a like, or a subscribe. If you are the owner of any of this content and have an issue with me sharing them, please contact me directly via pskolsky74@gmail.com!</h5></footer>
-
-	<script type="text/javascript" src="js/main.js"></script>
-</body>
-
-</html>
-
-
 /******************************************
 /* CSS
 /*******************************************/
 
 /* Box Model Hack */
 *{
-  box-sizing: border-box;
-}
-/* Fonts
-Roboto Serif
-DotGothic16
-Gruppo */
-/******************************************
-/* LAYOUT
-/*******************************************/
-
-.hidden{
-	display: none;  
-}
-
-.center{
-  display: flex;
+    box-sizing: border-box;
+  }
+  /* Fonts
+  Roboto Serif
+  DotGothic16
+  Gruppo */
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  
+  .hidden{
+      display: none;  
+  }
+  
+  .center{
+    display: flex;
+      justify-content: center;
+    }
+  
+  .row {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
   }
-
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-body {
-  border: solid 60px rgba(36, 4, 87, 0.75); 
-  padding: 0 20px 40px 20px;
-  background: hsla(54, 56%, 66%, 1);
-  background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  background: -moz-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  background: -webkit-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
-}
-
-a{
-  font-size: 1.2rem;
-  color: rgb(43, 0, 43);
-  text-decoration: none;
-  padding-right: 10px;
-  transition: 0.4s;
-}
-
-a:hover{
-  color: black;
-  text-shadow: 1px 1px whitesmoke;
-}
-
-ul {
-  padding: 0;
-}
-
- li {  
-   list-style: none;
- }
-
- #addVideoHere {
-   margin-top: 10px;
- }
-
- 
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
- button { 
-   font-family: 'DotGothic16', 'Courier New', Courier, monospace;
-   border: solid 1px black;
-   border-radius: 10% 10% 15% 15%;
-   padding: 20px;
-   margin: 0 15px 10px 0;
-   transition: 0.4s;
- }
- button:hover {
-  color: black;
-  border: solid 1px rgb(148, 18, 126);
-  border-radius: 5% 5% 45% 15%;
-  background-color: mediumspringgreen;
-  text-transform: uppercase;
-  font-weight: 700;
- }
-
- h1, h2 {
-    font-family: 'Gruppo';     
-
- }
-
- h1 {
-   font-size: 5rem;
-   margin: 0;
-   text-shadow: 1px 2px #4e917196;
   
- }
- h2 {  
-  font-size: 2rem; 
-}
-
-
-#embed {
-  border: solid 8px hsla(54, 56%, 66%, 1);
-  border-radius: 10px;
-}
-
-
- h3, h5, h6 {
-   font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
-   margin-top: 0;
- }
- footer{
-   padding: 40px;
- }
-ChatGPT
-
-To give your HTML and CSS a sleek, minimal, retro feel with an 80s color palette, you can make several adjustments to your existing code. Here's a revised version:
-
-HTML:
-
-html
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="A funky bunch of curated YouTube playlists for interestingly specific and abstract moods">
-  <meta name="keywords" content="music, youtube, playlist, mood">
-
-  <title>Cavi's Mood Music Generator</title>
-
-  <!-- external CSS link -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <header>
-    <nav>
-      <ul class="row">
-        <li><a href="https://psdev.netlify.app/" target="_blank" rel="noopener noreferrer">Dev</a></li>
-        <li><a href="http://www.patrickskolskyart.com/" target="_blank" rel="noopener noreferrer">Art</a></li>
-        <li><a href="https://github.com/cerpinconsafo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://twitter.com/cerpinconsafo" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-        <li><a href="http://instagram/pskolsky_art" target="_blank" rel="noopener noreferrer">Insta</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <!-- landing area for user instructions -->
-    <h1 class="center">Mood Music Generator</h1>
-    <h6 class="center">brought to you by //cavi</h6>
-    <h3 class="center">Choose a mood below until you catch the vibe...</h3>
-
-    <!-- mood buttons -->
-    <section id="moodList">
-      <ul class="row">
-        <li><button id="phonkBut">Phonky</button></li>
-        <li><button id="chillBut">Mega-Chill</button></li>
-        <li><button id="zoneBut">Zone Me Out</button></li>
-        <li><button id="gameBut">Retro Gamin'</button></li>
-        <li><button id="miamiBut">Miami Strip Cruisin'</button></li>
-        <li><button id="heavyBut">Heavy AF</button></li>
-        <li><button id="mindBut">Mind Melter</button></li>
-        <li><button id="fourBut">4 to the Floor Bounce</button></li>
-      </ul>
-    </section>
-    <!-- end mood buttons -->
-
-    <!-- where the dynamic tagline for the currently active mood goes -->
-    <h2 id="moodTagline" class="row"></h2>
-
-    <!-- VIDEO container -->
-    <section id="addVideoHere" class="center">
-      <iframe id="embed" width="853" height="505" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-  </main>
-
-  <footer>
-    <h5>DISCLAIMER: I am merely SHARING these wonderful channels/playlists for a fun, little experiment. I DO NOT OWN ANY RIGHTS TO THESE YOUTUBE CHANNELS, NOR AM I SPONSORED/AFFILIATED WITH THEM. Please, if you enjoy the music/art/content, support each respective creator/channel by giving them a visit, a like, or a subscribe. If you are the owner of any of this content and have an issue with me sharing them, please contact me directly via pskolsky74@gmail.com!</h5>
-  </footer>
-
-  <script type="text/javascript" src="js/main.js"></script>
-</body>
-
-</html>
-
-CSS:
-
-css
-
-/* Reset default styles */
-body, h1, h2, h3, h5, h6, ul, li, p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Fonts */
-body {
-  font-family: 'DotGothic16', sans-serif;
-}
-
-h1, h2 {
-  font-family: 'Gruppo', sans-serif;
-}
-
-h3, h5, h6 {
-  font-family: 'Roboto Serif', sans-serif;
-}
-
-/* Page Styles */
-body {
-  background-color: #1b1b1b;
-  color: #f0f0f0;
-  text-align: center;
-}
-
-header {
-  background-color: #272727;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 15px;
-  font-size: 1.2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #f0f0f0;
-  transition: color 0.4s;
-}
-
-nav a:hover {
-  color: #ff1493; /* 80s pink */
-  text-shadow: 1px 1px 1px #000;
-}
-
-main {
-  padding: 20px;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-button {
-  font-family: 'DotGothic16', sans-serif;
-  background-color: #ff1493; /* 80s pink */
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.4s;
-}
-
-button:hover {
-  background-color: #9400d3; /* Dark Violet */
-}
-
-#embed {
-  border: solid 8px #ff1493; /* 80s pink */
-  border-radius: 10px;
-}
-
-These CSS and HTML changes give your page a sleek, minimal, retro feel with an 80s color palette. It uses an 80s-style pink color for buttons and headings, a black background, and a stylish font combination. Feel free to adjust the colors or fonts further to match your specific retro aesthetic.
-User
-Okay. The webpage wont load any of the videos now. And I hate the styling. Can we take a step back?
-ChatGPT
-
-Of course, let's take a step back and revert the styling to a more neutral and functional design while ensuring the videos load correctly. Here's a simplified version of your HTML and CSS:
-
-HTML:
-
-html
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="A collection of YouTube playlists for various moods">
-  <meta name="keywords" content="music, youtube, playlist, mood">
-
-  <title>Mood Music Generator</title>
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="https://psdev.netlify.app/" target="_blank" rel="noopener noreferrer">Dev</a></li>
-        <li><a href="http://www.patrickskolskyart.com/" target="_blank" rel="noopener noreferrer">Art</a></li>
-        <li><a href="https://github.com/cerpinconsafo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://twitter.com/cerpinconsafo" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-        <li><a href="http://instagram/pskolsky_art" target="_blank" rel="noopener noreferrer">Insta</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>Mood Music Generator</h1>
-    <h3>Choose a mood below:</h3>
-
-    <section id="moodList">
-      <ul>
-        <li><button id="phonkBut">Phonky</button></li>
-        <li><button id="chillBut">Mega-Chill</button></li>
-        <li><button id="zoneBut">Zone Me Out</button></li>
-        <li><button id="gameBut">Retro Gamin'</button></li>
-        <li><button id="miamiBut">Miami Strip Cruisin'</button></li>
-        <li><button id="heavyBut">Heavy AF</button></li>
-        <li><button id="mindBut">Mind Melter</button></li>
-        <li><button id="fourBut">4 to the Floor Bounce</button></li>
-      </ul>
-    </section>
-
-    <h2 id="moodTagline"></h2>
-
-    <section id="addVideoHere">
-      <iframe id="embed" width="853" height="505" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-  </main>
-
-  <footer>
-    <p>DISCLAIMER: This website shares YouTube playlists for fun. I do not own the content.</p>
-  </footer>
-
-  <script type="text/javascript" src="js/main.js"></script>
-</body>
-
-</html>
-
-CSS:
-
-css
-
-/* Reset default styles */
-body, h1, h2, h3, ul, li, p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Fonts */
-body {
-  font-family: Arial, sans-serif;
-}
-
-/* Page Styles */
-body {
-  background-color: #f0f0f0;
-  color: #333;
-  text-align: center;
-  padding: 20px;
-}
-
-header {
-  background-color: #333;
-  color: #f0f0f0;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 15px;
-  font-size: 1.2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #f0f0f0;
-  transition: color 0.4s;
-}
-
-nav a:hover {
-  color: #ff1493; /* Hot Pink */
-}
-
-main {
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-button {
-  background-color: #ff1493; /* Hot Pink */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.4s;
-}
-
-button:hover {
-  background-color: #9400d3; /* Dark Violet */
-}
-
-#embed {
-  border: solid 8px #ff1493; /* Hot Pink */
-}
+  body {
+    border: solid 60px rgba(36, 4, 87, 0.75); 
+    padding: 0 20px 40px 20px;
+    background: hsla(54, 56%, 66%, 1);
+    background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
+    background: -moz-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
+    background: -webkit-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
+  }
+  
+  a{
+    font-size: 1.2rem;
+    color: rgb(43, 0, 43);
+    text-decoration: none;
+    padding-right: 10px;
+    transition: 0.4s;
+  }
+  
+  a:hover{
+    color: black;
+    text-shadow: 1px 1px whitesmoke;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+   li {  
+     list-style: none;
+   }
+  
+   #addVideoHere {
+     margin-top: 10px;
+   }
+  
+   
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+   button { 
+     font-family: 'DotGothic16', 'Courier New', Courier, monospace;
+     border: solid 1px black;
+     border-radius: 10% 10% 15% 15%;
+     padding: 20px;
+     margin: 0 15px 10px 0;
+     transition: 0.4s;
+   }
+   button:hover {
+    color: black;
+    border: solid 1px rgb(148, 18, 126);
+    border-radius: 5% 5% 45% 15%;
+    background-color: mediumspringgreen;
+    text-transform: uppercase;
+    font-weight: 700;
+   }
+  
+   h1, h2 {
+      font-family: 'Gruppo';     
+  
+   }
+  
+   h1 {
+     font-size: 5rem;
+     margin: 0;
+     text-shadow: 1px 2px #4e917196;
+    
+   }
+   h2 {  
+    font-size: 2rem; 
+  }
+  
+  
+  #embed {
+    border: solid 8px hsla(54, 56%, 66%, 1);
+    border-radius: 10px;
+  }
+  
+  
+   h3, h5, h6 {
+     font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
+     margin-top: 0;
+   }
+   footer{
+     padding: 40px;
+   }
