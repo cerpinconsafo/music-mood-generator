@@ -68,7 +68,7 @@ function phonkVids() {
     removePreviousMoodText()
     moodTagline.innerText += 
     "Straight chillin...MEGA chillin...";   
-    let url = "https://www.youtube-nocookie.com/watch?v=rPjez8z61rI?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed?v=rPjez8z61rI?&autoplay=1";
     embed.src=url;  
 };
 
