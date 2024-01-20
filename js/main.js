@@ -68,7 +68,7 @@ function phonkVids() {
     removePreviousMoodText()
     moodTagline.innerText += 
     "Straight chillin...MEGA chillin...";   
-    let url = "https://www.youtube.com/embed/j4sJkuOPUP8&autoplay=1";
+    let url = "https://www.youtube.com/watch?v=rPjez8z61rI?&autoplay=1";
     embed.src=url;  
 };
 
@@ -132,4 +132,49 @@ function fourVids() {
     embed.src=url;
 };
 
+
+//  new functions need to implement this, more dry
+
+// <!-- HTML: -->
+// <!-- Buttons with different onclick events for different video arrays -->
+// <button onclick="playRandomVideo('playlist1')">Play Random Video (Playlist 1)</button>
+// <button onclick="playRandomVideo('playlist2')">Play Random Video (Playlist 2)</button>
+
+// <!-- JavaScript: -->
+
+// const playRandomVideo = (playlist) => {
+//     // Define multiple arrays of YouTube video links
+//     const playlists = {
+//         'playlist1': [
+//             'https://www.youtube.com/watch?v=video1a',
+//             'https://www.youtube.com/watch?v=video2a',
+//             'https://www.youtube.com/watch?v=video3a',
+//             // Add more video links for playlist1
+//         ],
+//         'playlist2': [
+//             'https://www.youtube.com/watch?v=video1b',
+//             'https://www.youtube.com/watch?v=video2b',
+//             'https://www.youtube.com/watch?v=video3b',
+//             // Add more video links for playlist2
+//         ],
+//         // Add more playlists as needed
+//     };
+
+//     // Check if the specified playlist exists
+//     if (playlists.hasOwnProperty(playlist)) {
+//         // Get the array of video links for the specified playlist
+//         const videoLinks = playlists[playlist];
+
+//         // Get a random index from the list
+//         const randomIndex = Math.floor(Math.random() * videoLinks.length);
+
+//         // Get the selected video link
+//         const selectedVideo = videoLinks[randomIndex];
+
+//         // Open the selected video link in a new tab
+//         window.open(selectedVideo, '_blank');
+//     } else {
+//         console.error('Invalid playlist specified.');
+//     }
+// };
 
