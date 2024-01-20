@@ -59,7 +59,7 @@ function phonkVids() {
     moodTagline.innerText += 
     "Yaooooo, Check out this Phonky shiiiii...";   
 
-    let url = "https://www.youtube-nocookie.com/embed/dv5yx1g5j6E?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/a0IVDyfMcmg?si=4t7486JeaYNmkNNV?&autoplay=1";
     embed.src=url;   
 };
 
@@ -68,7 +68,7 @@ function phonkVids() {
     removePreviousMoodText()
     moodTagline.innerText += 
     "Straight chillin...MEGA chillin...";   
-    let url = "https://www.youtube-nocookie.com/embed?v=rPjez8z61rI?&autoplay=1";
+    let url = "https://www.youtube-nocookie.com/embed/rPjez8z61rI?&autoplay=1";
     embed.src=url;  
 };
 
