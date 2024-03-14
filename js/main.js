@@ -98,10 +98,10 @@ function addVisitedUrl(url) {
   const previousVideoBut = document.getElementById("previousVideoBut");
   if (visitedUrls.length > 1) {
     previousVideoBut.style.display = "inline-block";
-  } else {
-    // Optionally, hide the button if there's only one or no video in the history
-    previousVideoBut.style.display = "none";
-  }
+  // } else {
+  //   // Optionally, hide the button if there's only one or no video in the history
+  //   previousVideoBut.style.display = "none";
+  // }
 }
 
 // Ensure the Previous Video button is hidden initially

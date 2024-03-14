@@ -89,12 +89,7 @@
     /* font-weight: 700; */
    }
 
-   #previousVideo {
-    display: none;
-   }
-
-
-  
+   
    h1, h2 {
       font-family: 'Gruppo';     
   
@@ -110,17 +105,20 @@
     font-size: 2rem; 
   }
   
-  
-  #embed {
+    #embed {
     border: solid 8px hsla(54, 56%, 66%, 1);
     border-radius: 15px;
   }
-  
-  
+    
    h3, h5, h6 {
      font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
      margin-top: 0;
    }
+
    footer{
      padding: 40px;
+   }
+
+   #previousVideoBut {
+    display: none;
    }
