@@ -53,11 +53,6 @@ const moodTagLines = {
 
 let previousIndex = {};
 
-// Event Listener for mood button click
-document
-  .querySelectorAll(".videoButton")
-  .forEach((button) => button.addEventListener("click", selectRandomVideo));
-
 //Select Random Video function
 function selectRandomVideo(event) {
   console.log("Button clicked:", event.target.id);
@@ -71,7 +66,6 @@ function selectRandomVideo(event) {
   if (!previousIndex.hasOwnProperty(buttonId)) {
     previousIndex[buttonId] = null;
   }
-  // Do While loops to get a random index from whichever VIDEO URL array is selected
   let randomIndex;
   do {
     randomIndex = Math.floor(Math.random() * videoIds.length);
@@ -91,30 +85,24 @@ function selectRandomVideo(event) {
 
   // Update mood tagline
   document.getElementById("moodTagLine").textContent = moodTagLines[buttonId];
+
+  // Add the selected video URL to visitedUrls and manage the Previous Video button visibility
+  addVisitedUrl(embedUrl);
 }
 
-//PREVIOUS VIDEO button
-let visitedUrls = []; // Array to store visited URLs
-
-// Function to navigate back
-function previousVideo() {
-  if (visitedUrls.length > 1) {
-    visitedUrls.pop(); // Remove the current URL
-    const previousUrl = visitedUrls.pop(); // Get the previous URL
-    window.location.href = previousUrl; // Navigate to the previous URL
-  } else {
-    const firstVideoMessageElement =
-      document.getElementById("firstVideoMessage");
-    firstVideoMessageElement.textContent =
-      "This is the first video you selected XD";
-  }
-}
-
-// Function to add a visited URL to the list
+// Function to add a visited URL to the list and manage the Previous Video button visibility
 function addVisitedUrl(url) {
   visitedUrls.push(url);
 
-  // Show the button after the first video is chosen
+  // Only show the button if there are at least 2 videos in the history
   const previousVideoBut = document.getElementById("previousVideoBut");
-  previousVideoBut.style.display = "inline-block";
+  if (visitedUrls.length > 1) {
+    previousVideoBut.style.display = "inline-block";
+  } else {
+    // Optionally, hide the button if there's only one or no video in the history
+    previousVideoBut.style.display = "none";
+  }
 }
+
+// Ensure the Previous Video button is hidden initially
+document.getElementById("previousVideoBut").style.display = "none";
