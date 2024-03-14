@@ -13,7 +13,7 @@ const urls = {
   zoneBut: ["F9L4q-0Pi4E", "4PdDI2swEaw", "9FllUz2Xm68"],
   gameBut: ["DJ_wEoW8Qcg"],
   miamiBut: ["85bkCmaOh4o"],
-  heavyBut: ["VIDEO_ID_HEAVY_1"],
+  heavyBut: ["MA2YTm7qjnE"],
   mindBut: ["VIDEO_ID_MIND_1"],
   fourBut: ["VIDEO_ID_FOUR_1"],
 };
@@ -24,7 +24,7 @@ const moodTagLines = {
   zoneBut: "On a futuristic dystopian ride through nostlagic voids.",
   gameBut: "Retro Gamin', no controller breakin",
   miamiBut: "That 'Cruising in a drop down the Miami strip' Vibe",
-  heavyBut: "Embrace the intensity of heavy beats.",
+  heavyBut: "Let the Heavy flow through you...",
   mindBut: "Mindful melodies to soothe your soul.",
   fourBut: "Four different flavors, one unique experience.",
 };
