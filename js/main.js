@@ -96,15 +96,6 @@ function selectRandomVideo(event) {
 //PREVIOUS VIDEO button
 let visitedUrls = []; // Array to store visited URLs
 
-// Function to add a visited URL to the list
-function addVisitedUrl(url) {
-  visitedUrls.push(url);
-
-  // Show the button after the first video is chosen
-  const previousVideoBut = document.getElementById("previousVideoBut");
-  previousVideoBut.style.display = "inline-block";
-}
-
 // Function to navigate back
 function previousVideo() {
   if (visitedUrls.length > 1) {
@@ -117,4 +108,13 @@ function previousVideo() {
     firstVideoMessageElement.textContent =
       "This is the first video you selected XD";
   }
+}
+
+// Function to add a visited URL to the list
+function addVisitedUrl(url) {
+  visitedUrls.push(url);
+
+  // Show the button after the first video is chosen
+  const previousVideoBut = document.getElementById("previousVideoBut");
+  previousVideoBut.style.display = "inline-block";
 }
