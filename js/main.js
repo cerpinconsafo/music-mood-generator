@@ -81,3 +81,7 @@ function selectRandomVideo(event) {
 document
   .querySelectorAll(".videoButton")
   .forEach((button) => button.addEventListener("click", selectRandomVideo));
+
+function goBack() {
+  window.history.back(); // This will navigate back to the previous URL
+}
