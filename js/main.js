@@ -83,5 +83,9 @@ document
   .forEach((button) => button.addEventListener("click", selectRandomVideo));
 
 function goBack() {
-  window.history.back(); // This will navigate back to the previous URL
+  if (window.history.length > 1) {
+    window.history.back(); // Navigate back to the previous URL
+  } else {
+    alert("You've reached the beginning of your browsing history.");
+  }
 }
