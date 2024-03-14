@@ -82,11 +82,11 @@ document
   .querySelectorAll(".videoButton")
   .forEach((button) => button.addEventListener("click", selectRandomVideo));
 
-//GO BACK button
+//PREVIOUS VIDEO button
 let visitedUrls = []; // Array to store visited URLs
 
 // Function to navigate back
-function goBack() {
+function previousVideo() {
   if (visitedUrls.length > 1) {
     visitedUrls.pop(); // Remove the current URL
     const previousUrl = visitedUrls.pop(); // Get the previous URL
