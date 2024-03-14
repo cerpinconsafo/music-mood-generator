@@ -14,7 +14,7 @@ const urls = {
   gameBut: ["DJ_wEoW8Qcg"],
   miamiBut: ["85bkCmaOh4o"],
   heavyBut: ["MA2YTm7qjnE"],
-  mindBut: ["VIDEO_ID_MIND_1"],
+  mindBut: ["zjJB_dMuEtY"],
   fourBut: ["VIDEO_ID_FOUR_1"],
 };
 
@@ -25,7 +25,7 @@ const moodTagLines = {
   gameBut: "Retro Gamin', no controller breakin",
   miamiBut: "That 'Cruising in a drop down the Miami strip' Vibe",
   heavyBut: "Let the Heavy flow through you...",
-  mindBut: "Mindful melodies to soothe your soul.",
+  mindBut: "Expand Your M I N D",
   fourBut: "Four different flavors, one unique experience.",
 };
 
