@@ -102,4 +102,8 @@ function previousVideo() {
 // Function to add a visited URL to the list
 function addVisitedUrl(url) {
   visitedUrls.push(url);
+
+  // Show the button after the first video is chosen
+  const previousVideoBut = document.getElementById("previousVideoBut");
+  previousVideoBut.style.display = "inline-block";
 }
