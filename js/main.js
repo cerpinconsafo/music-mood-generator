@@ -29,7 +29,7 @@ const moodTagLines = {
   fourBut: "Get Ready To Move Your Body, BBY!",
 };
 
-let previousIndices = {};
+let previousIndex = {};
 
 function selectRandomVideo(event) {
   console.log("Button clicked:", event.target.id);
@@ -37,16 +37,16 @@ function selectRandomVideo(event) {
   const videoIds = urls[buttonId];
   if (!videoIds) return; // No videos for this button
 
-  if (!previousIndices.hasOwnProperty(buttonId)) {
-    previousIndices[buttonId] = null;
+  if (!previousIndex.hasOwnProperty(buttonId)) {
+    previousIndex[buttonId] = null;
   }
-
+  console.log("Embed URL:", embedUrl); // Check the generated embed URL
   let randomIndex;
   do {
     randomIndex = Math.floor(Math.random() * videoIds.length);
-  } while (videoIds.length > 1 && randomIndex === previousIndices[buttonId]);
+  } while (videoIds.length > 1 && randomIndex === previousIndex[buttonId]);
 
-  previousIndices[buttonId] = randomIndex;
+  previousIndex[buttonId] = randomIndex;
 
   const videoId = videoIds[randomIndex];
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?&autoplay=1`;
