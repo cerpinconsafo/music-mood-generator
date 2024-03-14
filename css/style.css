@@ -89,6 +89,10 @@
     /* font-weight: 700; */
    }
 
+   #previousVideoBut {
+    display: none;
+   }
+
 
   
    h1, h2 {
