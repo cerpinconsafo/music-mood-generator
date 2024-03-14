@@ -1,6 +1,7 @@
 // //  newer JS
 //still need to update ALL buttons again and make sure each video will work, currently having trouble with TRAPPIN IN JAPAN, and trying to see if its that video alone or what
 
+//Arrays containing available videos for each MOOD BUTTON
 const urls = {
   phonkBut: ["UtlwUJpJchA", "9n4yKwRnCTE", "T6w7MABthn4", "goWhGZGl0Qo"],
   chillBut: [
@@ -38,6 +39,7 @@ const urls = {
   fourBut: ["bk6Xst6euQk"],
 };
 
+// Tagline Text to display for each mood
 const moodTagLines = {
   phonkBut: "Yaooooo, Check out this Phonky shiiiii...",
   chillBut: "Straight chillin...MEGA chillin...",
@@ -51,15 +53,25 @@ const moodTagLines = {
 
 let previousIndex = {};
 
+// Event Listener for mood button click
+document
+  .querySelectorAll(".videoButton")
+  .forEach((button) => button.addEventListener("click", selectRandomVideo));
+
+//Select Random Video function
 function selectRandomVideo(event) {
   console.log("Button clicked:", event.target.id);
   const buttonId = event.target.id;
   const videoIds = urls[buttonId];
-  if (!videoIds) return; // No videos for this button
 
+  // No videos for this button
+  if (!videoIds) return;
+
+  // Check to avoid getting same video result
   if (!previousIndex.hasOwnProperty(buttonId)) {
     previousIndex[buttonId] = null;
   }
+  // Do While loops to get a random index from whichever VIDEO URL array is selected
   let randomIndex;
   do {
     randomIndex = Math.floor(Math.random() * videoIds.length);
@@ -67,9 +79,12 @@ function selectRandomVideo(event) {
 
   previousIndex[buttonId] = randomIndex;
 
+  // Setting up the full URL with the RANDOM array index to insert into the iframe player
   const videoId = videoIds[randomIndex];
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?&autoplay=1`;
-  console.log("Embed URL:", embedUrl); // Check the generated embed URL
+
+  // Check the generated embed URL
+  console.log("Embed URL:", embedUrl);
 
   // Update the iframe's src attribute directly
   document.getElementById("embed").src = embedUrl;
@@ -78,12 +93,17 @@ function selectRandomVideo(event) {
   document.getElementById("moodTagLine").textContent = moodTagLines[buttonId];
 }
 
-document
-  .querySelectorAll(".videoButton")
-  .forEach((button) => button.addEventListener("click", selectRandomVideo));
-
 //PREVIOUS VIDEO button
 let visitedUrls = []; // Array to store visited URLs
+
+// Function to add a visited URL to the list
+function addVisitedUrl(url) {
+  visitedUrls.push(url);
+
+  // Show the button after the first video is chosen
+  const previousVideoBut = document.getElementById("previousVideoBut");
+  previousVideoBut.style.display = "inline-block";
+}
 
 // Function to navigate back
 function previousVideo() {
@@ -97,13 +117,4 @@ function previousVideo() {
     firstVideoMessageElement.textContent =
       "This is the first video you selected XD";
   }
-}
-
-// Function to add a visited URL to the list
-function addVisitedUrl(url) {
-  visitedUrls.push(url);
-
-  // Show the button after the first video is chosen
-  const previousVideoBut = document.getElementById("previousVideoBut");
-  previousVideoBut.style.display = "inline-block";
 }
