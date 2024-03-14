@@ -10,7 +10,7 @@ const urls = {
     "JqLIV9QzYt8",
     "DTdtjXRq5KM",
   ],
-  zoneBut: ["F9L4q-0Pi4E", "zoneVid2"],
+  zoneBut: ["F9L4q-0Pi4E", "4PdDI2swEaw"],
   gameBut: ["DJ_wEoW8Qcg"],
   miamiBut: ["VIDEO_ID_MIAMI_1"],
   heavyBut: ["VIDEO_ID_HEAVY_1"],
