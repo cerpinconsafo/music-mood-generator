@@ -85,7 +85,7 @@
 // function gameVids() {
 //   console.log("pressed the game button");
 //   removePreviousMoodText();
-//   moodTagline.innerText += "Retro Gamin', but for your ears";
+//   moodTagline.innerText += "Retro Gamin', no controller breakin";
 
 //   let url = "https://www.youtube-nocookie.com/embed/DJ_wEoW8Qcg?&autoplay=1";
 //   embed.src = url;
