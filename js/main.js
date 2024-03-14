@@ -40,7 +40,6 @@ function selectRandomVideo(event) {
   if (!previousIndex.hasOwnProperty(buttonId)) {
     previousIndex[buttonId] = null;
   }
-  console.log("Embed URL:", embedUrl); // Check the generated embed URL
   let randomIndex;
   do {
     randomIndex = Math.floor(Math.random() * videoIds.length);
