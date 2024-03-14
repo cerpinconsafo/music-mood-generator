@@ -82,10 +82,24 @@ document
   .querySelectorAll(".videoButton")
   .forEach((button) => button.addEventListener("click", selectRandomVideo));
 
+//GO BACK button
+let visitedUrls = []; // Array to store visited URLs
+
+// Function to navigate back
 function goBack() {
-  if (window.history.length > 1) {
-    window.history.back(); // Navigate back to the previous URL
+  if (visitedUrls.length > 1) {
+    visitedUrls.pop(); // Remove the current URL
+    const previousUrl = visitedUrls.pop(); // Get the previous URL
+    window.location.href = previousUrl; // Navigate to the previous URL
   } else {
-    alert("You've reached the beginning of your browsing history.");
+    const firstVideoMessageElement =
+      document.getElementById("firstVideoMessage");
+    firstVideoMessageElement.textContent =
+      "This is the first video you selected XD";
   }
+}
+
+// Function to add a visited URL to the list
+function addVisitedUrl(url) {
+  visitedUrls.push(url);
 }
