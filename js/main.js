@@ -26,7 +26,7 @@ const moodTagLines = {
   miamiBut: "That 'Cruising in a drop down the Miami strip' Vibe",
   heavyBut: "Let the Heavy flow through you...",
   mindBut: "Expand Your M I N D",
-  fourBut: "pressed the four to floor button.",
+  fourBut: "Get Ready To Move Your Body, BBY!",
 };
 
 let previousIndices = {};
