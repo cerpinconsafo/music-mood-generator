@@ -32,6 +32,7 @@ const moodTagLines = {
 let previousIndices = {};
 
 function selectRandomVideo(event) {
+  console.log("Button clicked:", event.target.id);
   const buttonId = event.target.id;
   const videoIds = urls[buttonId];
   if (!videoIds) return; // No videos for this button
@@ -49,6 +50,7 @@ function selectRandomVideo(event) {
 
   const videoId = videoIds[randomIndex];
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?&autoplay=1`;
+  console.log("Embed URL:", embedUrl); // Check the generated embed URL
 
   // Update the iframe's src attribute directly
   document.getElementById("embed").src = embedUrl;
