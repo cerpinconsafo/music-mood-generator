@@ -35,7 +35,7 @@ html {
 body {
   border: solid 60px rgba(36, 4, 87, 0.75);   
   padding: 0 20px 40px 20px;
-  /* min-height: 100%; */
+  min-height: 100%;
   background: hsla(54, 56%, 66%, 1);
   background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
   background: -moz-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
