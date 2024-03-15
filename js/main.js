@@ -1,7 +1,4 @@
-// //  newer JS
-//still need to update ALL buttons again and make sure each video will work, currently having trouble with TRAPPIN IN JAPAN, and trying to see if its that video alone or what
-
-//Arrays containing available videos for each MOOD BUTTON
+// Arrays containing available videos for each MOOD BUTTON
 const urls = {
   phonkBut: ["UtlwUJpJchA", "9n4yKwRnCTE", "T6w7MABthn4", "goWhGZGl0Qo"],
   chillBut: [
@@ -43,8 +40,8 @@ const urls = {
 const moodTagLines = {
   phonkBut: "Yaooooo, Check out this Phonky shiiiii...",
   chillBut: "Straight chillin...MEGA chillin...",
-  zoneBut: "On a futuristic dystopian ride through nostlagic voids.",
-  gameBut: "Retro Gamin', no controller breakin",
+  zoneBut: "On a futuristic dystopian ride through nostalgic voids.",
+  gameBut: "Retro Gamin', no controller breakin'",
   miamiBut: "That 'Cruising in a drop down the Miami strip' Vibe",
   heavyBut: "Let the Heavy flow through you...",
   mindBut: "Expand Your M I N D",
@@ -52,8 +49,13 @@ const moodTagLines = {
 };
 
 let previousIndex = {};
+let visitedUrls = []; // Array to store visited video IDs
 
-//Select Random Video function
+// Event Listener for mood button click
+document
+  .querySelectorAll(".videoButton")
+  .forEach((button) => button.addEventListener("click", selectRandomVideo));
+
 function selectRandomVideo(event) {
   console.log("Button clicked:", event.target.id);
   const buttonId = event.target.id;
@@ -62,7 +64,7 @@ function selectRandomVideo(event) {
   // No videos for this button
   if (!videoIds) return;
 
-  // Check to avoid getting same video result
+  // Check to avoid getting the same video result
   if (!previousIndex.hasOwnProperty(buttonId)) {
     previousIndex[buttonId] = null;
   }
@@ -73,12 +75,8 @@ function selectRandomVideo(event) {
 
   previousIndex[buttonId] = randomIndex;
 
-  // Setting up the full URL with the RANDOM array index to insert into the iframe player
   const videoId = videoIds[randomIndex];
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?&autoplay=1`;
-
-  // Check the generated embed URL
-  console.log("Embed URL:", embedUrl);
 
   // Update the iframe's src attribute directly
   document.getElementById("embed").src = embedUrl;
@@ -86,23 +84,34 @@ function selectRandomVideo(event) {
   // Update mood tagline
   document.getElementById("moodTagLine").textContent = moodTagLines[buttonId];
 
-  // Add the selected video URL to visitedUrls and manage the Previous Video button visibility
-  addVisitedUrl(embedUrl);
+  // Add the selected video ID to visitedUrls and manage the Previous Video button visibility
+  addVisitedUrl(videoId);
 }
 
-// Function to add a visited URL to the list and manage the Previous Video button visibility
-function addVisitedUrl(url) {
-  visitedUrls.push(url);
+// Function to add a visited video ID to the list and manage the Previous Video button visibility
+function addVisitedUrl(videoId) {
+  visitedUrls.push(videoId);
 
-  // Only show the button if there are at least 2 videos in the history
   const previousVideoBut = document.getElementById("previousVideoBut");
   if (visitedUrls.length > 1) {
     previousVideoBut.style.display = "inline-block";
   } else {
-    // Optionally, hide the button if there's only one or no video in the history
     previousVideoBut.style.display = "none";
   }
 }
 
-// Ensure the Previous Video button is hidden initially
-document.getElementById("previousVideoBut").style.display = "none";
+// Function to navigate back to the previous video
+function previousVideo() {
+  if (visitedUrls.length > 1) {
+    visitedUrls.pop(); // Remove the current URL
+    const previousVideoId = visitedUrls[visitedUrls.length - 1]; // Get the previous video ID
+    const embedUrl = `https://www.youtube-nocookie.com/embed/${previousVideoId}?&autoplay=1`;
+    document.getElementById("embed").src = embedUrl; // Navigate to the previous video
+  } else {
+    // Optional: Display a message or hide the button if there's no previous video
+    document.getElementById("firstVideoMessage").textContent =
+      "This is the first video you selected XD";
+  }
+}
+
+// Ensure the previousVideo function is correctly tied to your Previous Video button's onclick event in your HTML.
