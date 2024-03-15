@@ -5,6 +5,7 @@
 /* Box Model Hack */
 *{
     box-sizing: border-box;
+    height: 100vh;
   }
 
   /* Fonts
@@ -32,7 +33,7 @@
   
 body {
   border: solid 60px rgba(36, 4, 87, 0.75); 
-  height: 100vh;
+  
   padding: 0 20px 40px 20px;
   background: hsla(54, 56%, 66%, 1);
   background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
