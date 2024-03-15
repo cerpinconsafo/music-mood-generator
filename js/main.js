@@ -93,11 +93,14 @@ function addVisitedUrl(videoId) {
   visitedUrls.push(videoId);
 
   const previousVideoBut = document.getElementById("previousVideoBut");
+  // Show the button if there's more than one video in the history
   if (visitedUrls.length > 1) {
     previousVideoBut.style.display = "inline-block";
   } else {
     previousVideoBut.style.display = "none";
   }
+  // Hide the first video message when a new video is selected
+  document.getElementById("firstVideoMessage").style.display = "none";
 }
 
 // Function to navigate back to the previous video
@@ -107,11 +110,20 @@ function previousVideo() {
     const previousVideoId = visitedUrls[visitedUrls.length - 1]; // Get the previous video ID
     const embedUrl = `https://www.youtube-nocookie.com/embed/${previousVideoId}?&autoplay=1`;
     document.getElementById("embed").src = embedUrl; // Navigate to the previous video
+
+    // Since we navigated back, check if we're now at the first video and display the message if so
+    if (visitedUrls.length === 1) {
+      document.getElementById("firstVideoMessage").style.display = "block";
+      document.getElementById("firstVideoMessage").textContent =
+        "This is the first video you selected XD";
+    } else {
+      // Hide the message if we're not at the first video
+      document.getElementById("firstVideoMessage").style.display = "none";
+    }
   } else {
-    // Optional: Display a message or hide the button if there's no previous video
+    // If there's only one video in the history, it means we are at the first video
+    document.getElementById("firstVideoMessage").style.display = "block";
     document.getElementById("firstVideoMessage").textContent =
       "This is the first video you selected XD";
   }
 }
-
-// Ensure the previousVideo function is correctly tied to your Previous Video button's onclick event in your HTML.
