@@ -76,8 +76,8 @@ ul {
    border: solid 2px black;
    border-radius: 15% ;
    padding: 1em;
-   margin: 0 .5em ;
-   transition: 0.4s;
+   margin: 2em ;
+   transition: 2s;
  }
  button:hover {
   color: black;
