@@ -73,8 +73,8 @@ ul {
 /*******************************************/
  button { 
    font-family: 'DotGothic16', 'Courier New', Courier, monospace;
-   border: solid 2px black;
    
+   border-radius: 15% ;
    padding: 1em;
    margin: 2em .75em 0 0 ;
    transition: 2s;
@@ -82,7 +82,7 @@ ul {
  button:hover {
   color: black;
   border: solid 1px rgb(148, 18, 126);
-  
+  border-radius: 30%;
   background-color: mediumspringgreen;
   text-transform: uppercase;
   font-weight: 700;
