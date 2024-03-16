@@ -74,17 +74,16 @@ ul {
  button { 
    font-family: 'DotGothic16', 'Courier New', Courier, monospace;
    
-   border-radius: 15% ;
+   border-radius: 20% ;
    padding: 1em;
    margin: 2em .75em 0 0 ;
-   transition: 2s;
+   transition: .6s;
  }
  button:hover {
   color: black;
   border: solid 1px rgb(148, 18, 126);
   border-radius: 30%;
   background-color: mediumspringgreen;
-  text-transform: uppercase;
   font-weight: 700;
  }
 
