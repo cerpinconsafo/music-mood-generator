@@ -118,6 +118,11 @@ h3, h5, h6 {
   margin-top: 0;
 }
 
+#about {
+  margin: 5em;
+  padding: 4em;
+  width: 100%
+}
 footer{
   padding: 40px;
 }
