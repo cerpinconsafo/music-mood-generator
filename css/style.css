@@ -34,10 +34,10 @@ Gruppo */
 body {
   border: 3rem solid #301f30; /* Deep purple border */
   padding: 1rem;
-  background: hsla(54, 56%, 66%, 1);
-  background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  background: -moz-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  background: -webkit-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
+  background: rgb(183, 178, 127);
+  background: linear-gradient(90deg, rgb(193, 185, 115) 0%, #937ebb 100%);
+  background: -moz-linear-gradient(90deg, rgb(194, 186, 113) 0%, #9982c3 100%);
+  background: -webkit-linear-gradient(90deg, rgb(204, 195, 119) 0%, #927db9 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
 }
 
@@ -73,16 +73,16 @@ ul {
 /*******************************************/
  button { 
    font-family: 'DotGothic16', 'Courier New', Courier, monospace;
-   border: solid 1px black;
-   border-radius: 10% 10% 15% 15%;
-   padding: 20px;
-   margin: 0 15px 10px 0;
+   border: solid 2px black;
+   border-radius: 5% ;
+   padding: .25em;
+   margin: 0 .5em ;
    transition: 0.4s;
  }
  button:hover {
   color: black;
   border: solid 1px rgb(148, 18, 126);
-  border-radius: 5% 5% 45% 15%;
+  border-radius: 10%;
   background-color: mediumspringgreen;
   text-transform: uppercase;
   font-weight: 700;
