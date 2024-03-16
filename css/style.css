@@ -48,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: #ff6a00; /* Orange link color on hover */
+  color: #ffbf00; /* Amber link color on hover */
 }
 
 ul {
@@ -65,7 +65,7 @@ li {
 
 /* Page border */
 body {
-  border: 20px solid #ff6a00; /* Orange border */
+  border: 20px solid #800080; /* Deep purple border */
 }
 
 /* Header */
@@ -87,7 +87,7 @@ nav ul {
 nav a {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #ff6a00; /* Orange background color */
+  background-color: #00bfff; /* Dark neon blue background color */
 }
 
 /* Main section */
@@ -97,7 +97,7 @@ main {
 
 #addVideoHere {
   padding: 20px;
-  background: linear-gradient(45deg, #ff6a00, #d100ff); /* Gradient background */
+  background: linear-gradient(45deg, #00bfff, #00ff00); /* Gradient background (Dark neon blue to electric green) */
   border-radius: 10px;
 }
 
@@ -105,5 +105,27 @@ main {
 button {
   color: #fff; /* White text color */
   font-family: 'DotGothic16', sans-serif;
-  border: 2px solid #fff;
+  border: 2px solid #fff; /* White border */
+  border-radius: 10%;
+  padding: 20px;
+  margin: 10px;
+  transition: all 0.5s ease;
+  background-color: transparent; /* Transparent background */
+}
+
+button:hover {
+  color: #000; /* Black text color on hover */
+  background-color: #fff; /* White background color on hover */
+}
+
+/* About section */
+#about {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #808080; /* Steel gray background */
+  border-radius: 10px;
+}
+
+footer {
+  padding: 20px;
 }
