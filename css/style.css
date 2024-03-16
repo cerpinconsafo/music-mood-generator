@@ -33,21 +33,22 @@ html, body {
 }
 
 body {
-  padding: 20px;
+  padding: 0;
+  margin: 0;
   min-height: 100%;
-  background-color: #222; /* Dark background color */
+  background-color: #000; /* Black background color */
   color: #fff; /* White text color */
   font-family: 'DotGothic16', sans-serif;
 }
 
 a {
-  color: #8c8c8c; /* Muted link color */
+  color: #fff; /* White link color */
   text-decoration: none;
   transition: color 0.4s;
 }
 
 a:hover {
-  color: #fff; /* White link color on hover */
+  color: #ff6a00; /* Orange link color on hover */
 }
 
 ul {
@@ -58,65 +59,51 @@ li {
   list-style: none;
 }
 
-#addVideoHere {
-  margin-top: 20px;
-}
-
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
+/* Page border */
+body {
+  border: 20px solid #ff6a00; /* Orange border */
+}
+
+/* Header */
+header {
+  padding: 20px;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ff6a00; /* Orange background color */
+}
+
+/* Main section */
+main {
+  padding: 20px;
+}
+
+#addVideoHere {
+  padding: 20px;
+  background: linear-gradient(45deg, #ff6a00, #d100ff); /* Gradient background */
+  border-radius: 10px;
+}
+
+/* Buttons */
 button {
-  color: #fff; /* White button text color */
+  color: #fff; /* White text color */
   font-family: 'DotGothic16', sans-serif;
-  border: 2px solid transparent;
-  border-radius: 10%;
-  padding: 20px;
-  margin: 10px;
-  transition: all 0.5s ease;
-  background-color: #ff69b4; /* Muted pink button background color */
-}
-
-button:hover {
-  color: #000; /* Black button text color on hover */
-  border-color: #fff; /* White border color on hover */
-  background-color: #fff; /* White button background color on hover */
-}
-
-h1 {
-  font-size: 3rem; /* Larger font size for headings */
-  margin: 0;
-  text-shadow: 2px 2px #8c8c8c; /* Muted text shadow */
-  font-family: 'Gruppo', sans-serif;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-#embed {
-  border: 8px solid #ff69b4; /* Muted pink border for video player */
-  border-radius: 15px;
-}
-
-h3, h4, h5, h6 {
-  font-family: 'Roboto Serif', serif;
-  margin-top: 0;
-}
-
-#about {
-  margin: 3rem auto; /* Improved margin for about section */
-  padding: 2rem;
-  line-height: 1.6;
-  letter-spacing: 0.05rem;
-  background-color: #444; /* Dark gray background for about section */
-  border-radius: 15px;
-}
-
-footer {
-  padding: 20px;
-}
-
-#previousVideoBut {
-  display: none;
+  border: 2px solid #fff;
 }
