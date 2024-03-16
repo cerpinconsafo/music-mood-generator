@@ -76,7 +76,7 @@ ul {
    border: solid 2px black;
    border-radius: 15% ;
    padding: 1em;
-   margin: 2em ;
+   margin: 2em .75em 0 0 ;
    transition: 2s;
  }
  button:hover {
@@ -144,8 +144,8 @@ nav ul {
 
 nav a {
   padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #00bfff; /* Dark neon blue background color */
+ 
+  
 }
 
 /* Main section */
