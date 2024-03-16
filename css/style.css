@@ -3,133 +3,118 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
 }
 
-  /* Fonts
-  Roboto Serif
-  DotGothic16
-  Gruppo */
-  /******************************************
-  /* LAYOUT
-  /*******************************************/
-html {
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Gruppo&family=Roboto+Serif:wght@400;700&display=swap');
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+html, body {
   height: 100%;
 }
-.hidden{
-    display: none;  
-  }
-  
-.center{
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-  
+
 .row {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-  
+
 body {
-  border: solid 60px rgba(36, 4, 87, 0.75);   
-  padding: 0 20px 40px 20px;
+  padding: 20px;
   min-height: 100%;
-  background: hsla(54, 56%, 66%, 1);
-  background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  background: -moz-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  background: -webkit-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
+  background-color: #1a1a1a; /* Dark background color */
+  color: #fff; /* White text color */
+  font-family: 'DotGothic16', sans-serif;
 }
-  
-a{
-  font-size: 1.2rem;
-  color: rgb(43, 0, 43);
+
+a {
+  color: #dcdcdc; /* Light gray link color */
   text-decoration: none;
-  padding-right: 10px;
-  transition: 0.4s;
+  transition: color 0.4s;
 }
-  
-a:hover{
-  color: black;
-  text-shadow: 1px 1px whitesmoke;
+
+a:hover {
+  color: #fff; /* White link color on hover */
 }
-  
+
 ul {
   padding: 0;
 }
-  
-li {  
+
+li {
   list-style: none;
 }
-  
+
 #addVideoHere {
-  margin-top: 10px;
-}   
-  
+  margin-top: 20px;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-button { 
-  color: rgb(58, 58, 58);
-    font-family: 'DotGothic16', 'Courier New', Courier, monospace;
-    border: solid 1px transparent;
-    border-radius: 10%;
-    padding: 20px;
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
-    transition: all 1s ease;
+button {
+  color: #fff; /* White button text color */
+  font-family: 'DotGothic16', sans-serif;
+  border: 2px solid transparent;
+  border-radius: 10%;
+  padding: 20px;
+  margin: 10px;
+  transition: all 0.5s ease;
+  background-color: #148aff; /* Blue button background color */
 }
 
 button:hover {
-  color: black;
-  border: solid 1px rgb(148, 18, 126);
-  border-radius: 15% 30%;
-  background-color: mediumspringgreen;
-  text-transform: uppercase;
-  /* font-weight: 700; */
+  color: #000; /* Black button text color on hover */
+  border-color: #ff6a00; /* Orange border color on hover */
+  background-color: #ff6a00; /* Orange button background color on hover */
 }
 
-   
-h2, h3, h4, h5 {
-  font-family: 'Gruppo';
-}
-  
 h1 {
-  font-size: 5rem;
+  font-size: 3rem; /* Larger font size for headings */
   margin: 0;
-  text-shadow: 1px 2px #4e917196; 
-  font-family: "DotGothic16";   
+  text-shadow: 2px 2px #ff6a00; /* Orange text shadow */
+  font-family: 'Gruppo', sans-serif;
 }
 
-h2 {  
-  font-size: 2rem;   
-}  
+h2 {
+  font-size: 2rem;
+}
 
 #embed {
-  border: solid 8px hsla(54, 56%, 66%, 1);
+  border: 8px solid #ff6a00; /* Orange border for video player */
   border-radius: 15px;
 }
-    
-h3, h5, h6 {
-  font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
+
+h3, h4, h5, h6 {
+  font-family: 'Roboto Serif', serif;
   margin-top: 0;
 }
 
 #about {
-  margin: 6rem;
-  padding: 8rem;
-  line-height: 2.0;
-  letter-spacing: .2rem;
-  
+  margin: 3rem auto; /* Improved margin for about section */
+  padding: 2rem;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  background-color: #404040; /* Dark gray background for about section */
+  border-radius: 15px;
 }
-footer{
-  padding: 40px;
+
+footer {
+  padding: 20px;
 }
 
 #previousVideoBut {

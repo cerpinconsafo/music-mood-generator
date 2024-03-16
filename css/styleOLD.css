@@ -6,39 +6,45 @@
 *{
   box-sizing: border-box;
 }
-/* Fonts
-Roboto Serif
-DotGothic16
-Gruppo */
-/******************************************
-/* LAYOUT
-/*******************************************/
 
-.hidden{
-	display: none;  
+  /* Fonts
+  Roboto Serif
+  DotGothic16
+  Gruppo */
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+html {
+  height: 100%;
 }
-
+.hidden{
+    display: none;  
+  }
+  
 .center{
   display: flex;
-    justify-content: center;
-  }
-
+  justify-content: center;
+  align-items: center;
+}
+  
 .row {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
 }
-
+  
 body {
-  border: solid 60px rgba(36, 4, 87, 0.75); 
+  border: solid 60px rgba(36, 4, 87, 0.75);   
   padding: 0 20px 40px 20px;
+  min-height: 100%;
   background: hsla(54, 56%, 66%, 1);
   background: linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
   background: -moz-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
   background: -webkit-linear-gradient(90deg, hsla(54, 56%, 66%, 1) 0%, #C2A6F7 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
 }
-
+  
 a{
   font-size: 1.2rem;
   color: rgb(43, 0, 43);
@@ -46,72 +52,86 @@ a{
   padding-right: 10px;
   transition: 0.4s;
 }
-
+  
 a:hover{
   color: black;
   text-shadow: 1px 1px whitesmoke;
 }
-
+  
 ul {
   padding: 0;
 }
-
- li {  
-   list-style: none;
- }
-
- #addVideoHere {
-   margin-top: 10px;
- }
-
- 
-
+  
+li {  
+  list-style: none;
+}
+  
+#addVideoHere {
+  margin-top: 10px;
+}   
+  
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
- button { 
-   font-family: 'DotGothic16', 'Courier New', Courier, monospace;
-   border: solid 1px black;
-   border-radius: 10% 10% 15% 15%;
-   padding: 20px;
-   margin: 0 15px 10px 0;
-   transition: 0.4s;
- }
- button:hover {
-  color: black;
-  border: solid 1px rgb(148, 18, 126);
-  border-radius: 5% 5% 45% 15%;
-  background-color: mediumspringgreen;
-  text-transform: uppercase;
-  font-weight: 700;
- }
 
- h1, h2 {
-    font-family: 'Gruppo';     
-
- }
-
- h1 {
-   font-size: 5rem;
-   margin: 0;
-   text-shadow: 1px 2px #4e917196;
-  
- }
- h2 {  
-  font-size: 2rem; 
+button { 
+  color: rgb(58, 58, 58);
+    font-family: 'DotGothic16', 'Courier New', Courier, monospace;
+    border: solid 1px transparent;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    transition: all 1s ease;
 }
 
+button:hover {
+  color: black;
+  border: solid 1px rgb(148, 18, 126);
+  border-radius: 15% 30%;
+  background-color: mediumspringgreen;
+  text-transform: uppercase;
+  /* font-weight: 700; */
+}
+
+   
+h2, h3, h4, h5 {
+  font-family: 'Gruppo';
+}
+  
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  text-shadow: 1px 2px #4e917196; 
+  font-family: "DotGothic16";   
+}
+
+h2 {  
+  font-size: 2rem;   
+}  
 
 #embed {
   border: solid 8px hsla(54, 56%, 66%, 1);
-  border-radius: 10px;
+  border-radius: 15px;
+}
+    
+h3, h5, h6 {
+  font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
+  margin-top: 0;
 }
 
+#about {
+  margin: 6rem;
+  padding: 8rem;
+  line-height: 2.0;
+  letter-spacing: .2rem;
+  
+}
+footer{
+  padding: 40px;
+}
 
- h3, h5, h6 {
-   font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
-   margin-top: 0;
- }
- footer{
-   padding: 40px;
- }
+#previousVideoBut {
+  display: none;
+}
