@@ -24,12 +24,14 @@ html {
 .center{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
   
 .row {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
 }
   
 body {
