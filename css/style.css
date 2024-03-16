@@ -121,9 +121,9 @@ h3, h5, h6 {
 }
 
 #about {
-  margin: 5em;
-  padding: 4em;
-  width: 100%
+  margin: 5rem;
+  padding: 1rem;
+  
 }
 footer{
   padding: 40px;
