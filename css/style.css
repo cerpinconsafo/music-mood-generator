@@ -127,12 +127,12 @@ body {
 
 /* Header */
 header {
-  padding: 20px;
+  padding: 0 0 20px 0;
 }
 
 /* Navigation */
 nav {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 nav ul {
@@ -142,9 +142,8 @@ nav ul {
 }
 
 nav a {
-  padding: 10px 20px;
+  padding: 5px 15px;
  
-  
 }
 
 /* Main section */
@@ -153,13 +152,12 @@ main {
 }
 
 #addVideoHere {
-  padding: 3 rem;
-  
-  border-radius: .1em;
+  padding: 3rem;  
+  border-radius: 4px;
 }
 
 #about {
-  display: 100vh;
+  height: 100%vh;
   padding: 2rem;
   margin: 4rem;
   line-height: 1.45;
