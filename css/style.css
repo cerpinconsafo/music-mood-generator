@@ -157,11 +157,13 @@ main {
 }
 
 #about {
-  height: 100%vh;
+  font-family:Roboto Serif;
+  height: 100vh;
   padding: 2rem;
   margin: 4rem;
   line-height: 1.45;
-  background-color: #301f30b4;
+  background-color: #f8f4bce4;
+  filter:drop-shadow(rgb(13, 43, 33) 0.5rem 0.5rem 1rem)
 }
 
 /* Responsive Breakpoints */
