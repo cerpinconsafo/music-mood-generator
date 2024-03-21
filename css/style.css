@@ -42,7 +42,7 @@ button {
   font-family: 'DotGothic16', 'Courier New', Courier, monospace;
   font-size: 1.6rem;
   color: #332b33;
-  border-color: #2b002b;
+  border: 2px solid #2e2332;
   border-radius: 15%;
   padding: 1.5rem;
   margin: 2rem 1rem 0;
