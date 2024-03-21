@@ -1,17 +1,13 @@
-
-
-/******************************************
-/* CSS
-/*******************************************/
-
 /* Box Model Hack */
 *{
   box-sizing: border-box;
 }
+
 /* Fonts
 Roboto Serif
 DotGothic16
 Gruppo */
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -76,6 +72,7 @@ ul {
 /*******************************************/
  button { 
    font-family: 'DotGothic16', 'Courier New', Courier, monospace;
+   font-size: 1.6rem;
    color:#332b33;
    border-radius: 20% ;
    padding: 1em;
@@ -95,32 +92,33 @@ ul {
   background-color: rgb(51, 193, 138);
  }
 
- h1, h2 {
+ h1, h2, h3 {
     font-family: 'DotGothic16';     
  }
 
  h1 {
-   font-size: 5rem;
+   font-size: 7rem;
    margin: 0;
    text-shadow: 1px 2px #4e917196;
  }
 
  h2 {  
-  font-size: 2rem; 
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 2.4rem;
 }
 
 #embed {
-  border: solid 8px hsla(54, 56%, 66%, 1);
-  border-radius: 10px;
+  border: solid .8rem hsla(54, 56%, 66%, 1);
+  border-radius: 1rem;
 }
 
-h3, h5, h6 {
-   font-family: 'Roboto Serif', Georgia, 'Times New Roman', Times, serif;
-   margin-top: 0;
- }
 
  footer{
-   padding: 40px;
+   padding: 3rem;
  }
  /******************************************
 /* ADDITIONAL STYLES
@@ -152,28 +150,25 @@ nav a {
  
 }
 
-/* Main section */
-main {
-  padding: 1rem;
-}
-
 #addVideoHere {
-  padding: 3rem;  
+  padding: 2rem;  
   border-radius: 4px;
 }
 
 #about {
   font-family:Roboto Serif;
+  font-size: 1.8rem;
   padding: 2rem;
-  margin: 4rem;
+  margin: 10rem;
   
   background-color: #f8f4bce4;
   filter:drop-shadow(rgb(13, 43, 33) 0.5rem 0.5rem 1rem)
 }
-#about > p {
-  line-height: 1.45;
-  color:lime;
-  padding: 0 1rem;
+
+p {
+  line-height: 1.55;
+  color:rgb(11, 21, 11);
+  padding: 0 4rem;
 }
 
 /* Responsive Breakpoints */

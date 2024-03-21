@@ -32,7 +32,6 @@
 		<section >
 		<!-- landing area for user instructions -->
 			<h1 class="row">Mood Music Generator</h1>
-			<p class="row">brought to you by //cavi</p>
 			<h2 class="row">Choose a mood below until you catch the vibe...</h2>
 		</section>
 
@@ -54,29 +53,29 @@
 			</ul>
 
 			<!-- where the dynamic tagline for the currently active mood goes -->
-			<h2 id="moodTagLine" class="center"></h2>
+			<h3 id="moodTagLine" class="center"></h2>
 		</section><!-- end mood buttons -->
 		
 		<!-- VIDEO container -->
 		<section id="addVideoHere" class="center" >			
-			<iframe id ="embed"   width="853" height="505" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe id ="embed"   width="850" height="500" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay" allowfullscreen></iframe>
 
 			<!-- I want to add a 'more like this' button that randomly selects another similar video of the current mood via an array/object of each mood
 				<button class="moreButton">More Like This</button> -->
 
 		</section> 
 
-		<section id="previousVideo" >
+		<section id="previousVideo" class="row" >
 
-			<button id="previousVideoBut" class="center"onclick="previousVideo()">Previous Video</button>
+			<button id="previousVideoBut" onclick="previousVideo()">Previous Video</button>
 
 			<div>
-				<p id="firstVideoMessage" class="center"></p> <!-- First Video message -->
+				<p id="firstVideoMessage" ></p> <!-- First Video message -->
 			</div>
 
 		<section>
 	</main>
-	<section id="about" class="center">
+	<section id="about" class="row">
 		<h2>
 			- About this project -
 		</h2>
