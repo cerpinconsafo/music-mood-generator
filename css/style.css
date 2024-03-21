@@ -109,6 +109,9 @@ ul {
 h3 {
   font-size: 2.4rem;
 }
+h5 {
+  font-size: 1.2rem
+}
 
 #embed {
   border: solid .8rem hsla(54, 56%, 66%, 1);
