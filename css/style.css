@@ -42,7 +42,7 @@ button {
   font-family: 'DotGothic16', 'Courier New', Courier, monospace;
   font-size: 1.6rem;
   color: #332b33;
-  border: 2px solid #2e2332;
+  border: 2px solid #cbf6cb;
   border-radius: 15%;
   padding: 1.5rem;
   margin: 2rem 1rem 0;
@@ -51,6 +51,7 @@ button {
 
 button:hover {
   color: #1a161a;
+  border: 2px solid #2e2332;
   border-radius: 35%;
   background-color: mediumspringgreen;
 }
