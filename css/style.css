@@ -39,21 +39,21 @@ html {
 /*--------------*/
 
 button {
+  border-radius: 15%;
+  border: 2px solid #cbf6cb;
+  color: #332b33;
   font-family: 'DotGothic16', 'Courier New', Courier, monospace;
   font-size: 1.6rem;
-  color: #332b33;
-  border: 2px solid #cbf6cb;
-  border-radius: 15%;
-  padding: 1.5rem;
   margin: 2rem 1rem 0;
+  padding: 1.5rem;
   transition: .6s;
 }
 
 button:hover {
-  color: #1a161a;
-  border: 2px solid #2e2332;
-  border-radius: 35%;
   background-color: mediumspringgreen;
+  border-radius: 35%;
+  border: 2px solid #2e2332;
+  color: #1a161a;
 }
 
 button:focus {
@@ -104,12 +104,12 @@ footer {
 }
 
 body {
-  border: 3rem solid #301f30; /* Deep purple border */
-  padding: 1rem;
-  background: linear-gradient(90deg, rgb(193, 185, 115) 0%, #937ebb 100%);
   background: -moz-linear-gradient(90deg, rgb(194, 186, 113) 0%, #9982c3 100%);
   background: -webkit-linear-gradient(90deg, rgb(204, 195, 119) 0%, #927db9 100%);
+  background: linear-gradient(90deg, rgb(193, 185, 115) 0%, #937ebb 100%);
+  border: 3rem solid #301f30; /* Deep purple border */
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
+  padding: 1rem;
 }
 
 a {
@@ -152,12 +152,13 @@ nav a {
 /* Additional styles */
 /*--------------*/
 #about {
-  font-family: Roboto Serif;
-  font-size: 1.8rem;
-  padding: 2rem;
-  margin: 10rem;
   background-color: #f8f4bce4;
   filter: drop-shadow(rgb(13, 43, 33) 0.5rem 0.5rem 1rem);
+  font-family: Roboto Serif;
+  font-size: 1.8rem;
+  line-height:1.75;
+  margin: 10rem;
+  padding: 5rem;
 }
 
 #addVideoHere {
@@ -189,6 +190,7 @@ nav a {
   }
 
   button {
+    font-size:1.6rem;
     margin: .5rem;
   }
 }
