@@ -92,7 +92,7 @@ h5 {
 p {
   line-height: 1.55;
   color: #0b150b;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 }
 
 header {
@@ -160,7 +160,7 @@ nav a {
   filter: drop-shadow(rgb(13, 43, 33) 0.5rem 0.5rem 1rem);
 }
 
-#addVideoHere {
+.addVideoHere {
   margin-top: 1rem;
 }
 
