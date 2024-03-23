@@ -1,101 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="A funky bunch of curated youtube playlists for interestingly specific and abstract moods "
+    />
+    <meta name="keywords" content="music, youtube, playlist, mood" />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="description"
-		content="A funky bunch of curated youtube playlists for interestingly specific and abstract moods ">
-	<meta name="keywords" content="music, youtube, playlist, mood">
+    <title>Cavi's Mood Music Generator</title>
 
-	<title>Cavi's Mood Music Generator</title>
+    <!-- external CSS link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gruppo&family=Roboto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-	<!-- external CSS link -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gruppo&family=Roboto+Serif&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <nav>
+      <ul class="row">
+        <li><a href="#about" rel="noopener noreferrer">about</a></li>
+        <li>
+          <a
+            href="https://psdev.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >dev</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://psart.webflow.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            art</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/cerpinconsafo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-<body>	
-	<nav>
-		<ul class="row">
-			<li><a href="#about" rel="noopener noreferrer">about</a></li>	
-			<li><a href="https://psdev.netlify.app/" target="_blank" rel="noopener noreferrer">dev</a></li>
-			<li><a href="https://psart.webflow.io/" target="_blank" rel="noopener noreferrer"> art</a></li>
-			<li><a href="https://github.com/cerpinconsafo" target="_blank" rel="noopener noreferrer"> github</a></li>
-				
-		</ul>	
-	</nav>
-	
-	<main>
-		<section >
-		<!-- landing area for user instructions -->
-			<h1 class="row">Mood Music Generator</h1>
-			<h2 class="row">Choose a mood below until you catch the vibe...</h2>
-		</section>
+    <main>
+      <!-- name and tagline -->
+      <section class="center stack">
+        <h1 class="row">Mood Music Generator</h1>
+        <h2 class="row">Choose a mood below until you catch the vibe...</h2>
+      </section>
 
-		<!-- mood buttons -->
-		<section id="moodList">
-			<ul  class="row">
-				<li><button id="phonkBut" class="videoButton" >phonky</button></li>
-				<li><button id="chillBut" class="videoButton">mega-chill</button></li>
-				<li><button id="zoneBut" class="videoButton" >zone me out, drone me out</button></li>
-				<li><button id="gameBut" class="videoButton">like retro gaming</button></li>
-				
-				<li><button id="miamiBut" class="videoButton">miami strip cruisin'</button></li> <!-- this will be some smoothe ass stuff, not sure what -->
-				
-				<li><button id="heavyBut" class="videoButton">heeeeeeavy af</button></li> <!-- this will be some either metal or hardcore type stuff -->
-				
-				<li><button id="mindBut" class="videoButton">mind melter</button></li> <!-- this will be flylo/brainfeeder stuff -->
-				
-				<li><button id="fourBut" class="videoButton">bottle full of bub</button></li> <!-- house type club-ish flavor -->
-			</ul>
+      <!-- mood buttons -->
+      <section id="moodList">
+        <ul class="row">
+          <li><button id="phonkBut" class="videoButton">phonky</button></li>
+          <li><button id="chillBut" class="videoButton">mega-chill</button></li>
+          <li>
+            <button id="zoneBut" class="videoButton">
+              zone me out, drone me out
+            </button>
+          </li>
+          <li>
+            <button id="gameBut" class="videoButton">like retro gaming</button>
+          </li>
+          <li>
+            <button id="miamiBut" class="videoButton">
+              miami strip cruisin'
+            </button>
+          </li>
+          <li>
+            <button id="heavyBut" class="videoButton">heeeeeeavy af</button>
+          </li>
+          <li><button id="mindBut" class="videoButton">mind melter</button></li>
+          <li>
+            <button id="fourBut" class="videoButton">bottle full of bub</button>
+          </li>
+        </ul>
 
-			<!-- where the dynamic tagline for the currently active mood goes -->
-			<p>For Dev Branch Only</p>
-			<h3 id="moodTagLine" class="center"></h3>
-		</section><!-- end mood buttons -->
-		
-		<!-- VIDEO container -->
-		<section id="addVideoHere" class="center" >			
-			<iframe id ="embed"   width="850" height="500" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay" allowfullscreen></iframe>
+        <p>For Dev Branch Only</p>
 
-			<!-- I want to add a 'more like this' button that randomly selects another similar video of the current mood via an array/object of each mood
+        <!-- where the dynamic tagline for the currently playing mood goes -->
+        <h3 id="moodTagLine" class="center"></h3>
+      </section>
+      <!-- end mood buttons -->
+
+      <!-- main video container -->
+      <section id="addVideoHere" class="center">
+        <iframe
+          id="embed"
+          width="850"
+          height="500"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay"
+          allowfullscreen
+        ></iframe>
+
+        <!-- I want to add a 'more like this' button that randomly 
+				selects another similar video of the current mood via an 
+				array/object of each mood
+
 				<button class="moreButton">More Like This</button> -->
+      </section>
 
-		</section> 
+      <section id="previousVideo" class="row">
+        <button id="previousVideoBut" onclick="previousVideo()">
+          Previous Video
+        </button>
 
-		<section id="previousVideo" class="row" >
+        <!-- First Video message -->
+        <p id="firstVideoMessage"></p>
+      </section>
 
-			<button id="previousVideoBut" onclick="previousVideo()">Previous Video</button>
+      <section id="about" class="row">
+        <h3>- About this project -</h3>
+        <section class="row">
+          <p>
+            The 'Mood Music Generator' is a fun and simple web app idea
+            presented as an audio/visual experiment. Each button represents 'the
+            mood', which contains a unique audio and visual experience. At
+            first, I only thought about playing one video at a time. Eventually,
+            I curated a nice batch of videos, and gave each 'mood' a larger
+            selection to choose from.
+          </p>
+          <p>
+            Then I thought about how I sometimes I enjoy a sort of visual
+            ambience when I browse audio on youtube. It is a video based
+            platform after all! Those visual elements (think of a moving
+            fireplace for the holidays, or a cafe with weather effects through
+            the windows) are a great additional to the audio. Some of my videos
+            were just static images playing the music, which was nice, but I
+            wanted to have move visuals to look at. So in my search for good
+            music, they also needed to have a unique visual element.
+          </p>
+          <p>
+            Still, I wanted to add more interaction with the idea of audio and
+            visual moods. What if we just gathered an entire seperate group of
+            interesting videos, and allowed the ability to switch between
+            different videos to display while listening? Maybe you want to the
+            retro videogames video, or what if you prefer just a relaxing
+            weather background video? Anime highlights? A nature livestream?
+          </p>
+          <p>
+            This is the current iteration of the MMGen, and what I am working
+            on. This is a constant work in progres.
+          </p>
+          <p>
+            All in all, I hope you can find some interesting mood music and
+            enjoy from the variety of visual options there are to accompany.
+          </p>
+        </section>
+      </section>
+    </main>
 
-			<div>
-				<p id="firstVideoMessage" ></p> <!-- First Video message -->
-			</div>
+    <footer>
+      <h5>
+        DISCLAIMER: I am merely SHARING these wonderful channels/playlists for a
+        fun, little experiment. I DO NOT OWN ANY RIGHTS TO THESE YOUTUBE
+        CHANNELS, NOR AM I SPONSORED/AFFILIATED WITH THEM. Please, if you enjoy
+        the music/art/content, support each respective creator/channel by giving
+        them a visit, a like, or a subscribe. If you are the owner of any of
+        this content and have an issue with me sharing them, please contact me
+        directly via pskolsky74@gmail.com!
+      </h5>
+    </footer>
 
-		<section>
-	</main>
-	<section id="about" class="row">
-		<h3>
-			- About this project -
-		</h3>
-		<section class="row">
-			<p>The 'Mood Music Generator' is a fun and simple web app idea presented as an audio/visual experiment. Each button represents 'the mood', which contains a unique audio and visual experience. At first, I only thought about playing one video at a time. Eventually, I curated a nice batch of videos, and gave each 'mood' a larger selection to choose from. 
-			</p>
-			<p>Then I thought about how I sometimes I enjoy a sort of visual ambience when I browse audio on youtube. It is a video based platform after all! Those visual elements (think of a moving fireplace for the holidays, or a cafe with weather effects through the windows) are a great additional to the audio. Some of my videos were just static images playing the music, which was nice, but I wanted to have move visuals to look at. So in my search for good music, they also needed to have a unique visual element. </p>
-			<p>Still, I wanted to add more interaction with the idea of audio and visual moods. What if we just gathered an entire seperate group of interesting videos, and allowed the ability to switch between different videos to display while listening? Maybe you want to the retro videogames video, or what if you prefer just a relaxing weather background video? Anime highlights? A nature livestream? </p>
-			<p>This is the current iteration of the MMGen, and what I am working on. This is a constant work in progres.</p>
-			<p>All in all, I hope you can find some interesting mood music and enjoy from the variety of visual options there are to accompany.</p>
-		</section>
-	</section>
-
-	<footer>
-		<h5>DISCLAIMER: I am merely SHARING these wonderful channels/playlists for a fun, little experiment. I DO NOT OWN ANY RIGHTS TO THESE YOUTUBE CHANNELS, NOR AM I SPONSORED/AFFILIATED WITH THEM. Please, if you enjoy the music/art/content, support each respective creator/channel by giving them a visit, a like, or a subscribe. If you are the owner of any of this content and have an issue with me sharing them, please contact me directly via pskolsky74@gmail.com!			
-		</h5>
-	</footer>
-
-<script type="text/javascript" src="js/main.js"></script>
-
-</body>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
