@@ -26,6 +26,7 @@ html {
 .center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .row {
@@ -33,6 +34,12 @@ html {
   flex-flow: row wrap;
   justify-content: center;
 }
+
+.stack {
+    flex-direction: column;
+      
+}
+ 
 
 /*--------------*/
 /* Button Styles */
@@ -92,7 +99,7 @@ h5 {
 p {
   line-height: 1.55;
   color: #0b150b;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 }
 
 header {
@@ -161,7 +168,7 @@ nav a {
   padding: 5rem;
 }
 
-#addVideoHere {
+.addVideoHere {
   margin-top: 1rem;
 }
 

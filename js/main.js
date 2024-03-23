@@ -18,6 +18,7 @@ const urls = {
     "RIwvpw7B26U",
     "gfo2BhaUr6A",
     "g_As36EVimY",
+    "-CZHL8w52Co",
   ],
   gameBut: [
     "DJ_wEoW8Qcg",
@@ -34,6 +35,16 @@ const urls = {
   heavyBut: ["MA2YTm7qjnE"],
   mindBut: ["zjJB_dMuEtY"],
   fourBut: ["bk6Xst6euQk"],
+  ambientBut: [
+    "6VoYpOW4Zds",
+    "gAsNvXDsrGA",
+    "zgbp1PAoDT8",
+    "YjUkT-Ufrv8",
+    "Q4bG6wewZdM",
+    "ystDk4l3-vI",
+    "F399teRPBaY",
+    "Et7O5-CzJZg",
+  ],
 };
 
 // Tagline Text to display for each mood
@@ -46,6 +57,7 @@ const moodTagLines = {
   heavyBut: "Let the Heavy flow through you...",
   mindBut: "Expand Your M I N D",
   fourBut: "Get Ready To Move Your Body, BBY!",
+  ambientBut: "Some Nice Ambience ",
 };
 
 let previousIndex = {};
