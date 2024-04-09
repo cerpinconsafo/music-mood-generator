@@ -61,23 +61,34 @@
 		</section><!-- end mood buttons -->
 		
 		<!-- VIDEO container -->
-		<section id="addVideoHere" class="center" >			
+		<section id="moodVideo" class="center stack addVideoHere" >			
 			<iframe id ="embed"   width="850" height="500" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay" allowfullscreen></iframe>
 
 			<!-- I want to add a 'more like this' button that randomly selects another similar video of the current mood via an array/object of each mood
 				<button class="moreButton">More Like This</button> -->
 
+				<section id="previousVideo" class="" >
+
+					<li><button id="previousVideoBut" onclick="previousVideo()">Previous Video</button></li>
+		
+					<div>
+						<p id="firstVideoMessage" ></p> <!-- First Video message -->
+					</div>
+		
+				<section>
+
 		</section> 
 
-		<section id="previousVideo" class="row" >
+<!-- 		
+ Section for the Ambient Videos
+		<section id="ambientVideo"class="row  addVideoHere" >		
+			<p>Browse other Ambient Videos here
+			</p>	
+			<iframe id ="embed"   width="850" height="500" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay" allowfullscreen></iframe>
+			<li><button id="ambientBut" class="videoButton center">ambient videos</button></li> 
+		</section> 
+ -->
 
-			<button id="previousVideoBut" onclick="previousVideo()">Previous Video</button>
-
-			<div>
-				<p id="firstVideoMessage" ></p> <!-- First Video message -->
-			</div>
-
-		<section>
 	</main>
 	<section id="about" class="row">
 		<h3>
