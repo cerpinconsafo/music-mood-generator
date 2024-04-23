@@ -51,6 +51,9 @@ html {
 /*--------------*/
 
 button {
+  border-radius: 15%;
+  border: 2px solid #cbf6cb;
+  color: #332b33;
   font-family: 'DotGothic16', 'Courier New', Courier, monospace;
   font-size: 1.6rem;
   color: #332b33;
@@ -62,10 +65,10 @@ button {
 }
 
 button:hover {
-  color: #1a161a;
-  border: 2px solid #2e2332;
-  border-radius: 35%;
   background-color: mediumspringgreen;
+  border-radius: 35%;
+  border: 2px solid #2e2332;
+  color: #1a161a;
 }
 
 button:focus {
@@ -130,6 +133,7 @@ body {
   background: -moz-linear-gradient(90deg, rgb(194, 186, 113) 0%, #9e81d3 100%);
   background: -webkit-linear-gradient(90deg, rgb(204, 195, 119) 0%, #9e81d3 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D9CF79", endColorstr="#5612D6", GradientType=1 );
+  padding: 1rem;
 }
 
 a {
@@ -172,6 +176,7 @@ nav a {
 /* Additional styles */
 /*--------------*/
 #about {
+
   font-size: 1.8rem;
   line-height: 1.6;
   margin: 2rem auto;
@@ -216,8 +221,7 @@ max-width: 900px;
   }
 
   button {
-    margin: .2.5rem;
-    font-size: 1.6rem;
-
+    font-size:1.6rem;
+    margin: .5rem;
   }
 }
